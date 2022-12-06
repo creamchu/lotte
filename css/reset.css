@@ -49,9 +49,9 @@ a{display:inline-block;}
 strong, em{font-weight:700;}
 /* form */
 input,select,label,textarea{border-radius:0;-webkit-border-radius:0;background-color:transparent;color:#fff;font-size:14px;line-height:normal;font-family:'Pretendard','돋움','dotum','AppleGothic','AppleSDGothicNeo','Helvetica',sans-serif;vertical-align:middle;}
-input[type='text'],input[type='password'],input[type='submit'],input[type='search']{-webkit-appearance:none;border-radius:0}
+input[type='text'],input[type='password'],input[type='submit'],input[type='search']{-webkit-appearance:none;border-radius:0;}
 input:checked[type='checkbox']{-webkit-appearance:checkbox;}
-input[type='button'],input[type='submit'],input[type='reset'],input[type='file']{-webkit-appearance:button;border-radius:0;border:0 none;background-color:transparent;cursor:pointer;}
+input[type='button'],input[type='submit'],input[type='reset'],input[type='file']{-webkit-appearance:button;border:0 none;cursor:pointer;}
 input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
 table{border-collapse:collapse;border-spacing:0}
 address,caption{font-style:normal;font-weight:normal}

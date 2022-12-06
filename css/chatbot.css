@@ -52,12 +52,12 @@
 .gray-text {color:#B3B3B3;font-size:14px;line-height:24px;}
 
 /* form */
-input, select, textarea {background:#462784;}
+input, select, textarea {background:#462784;border-radius:16px;}
 textarea {width:100%;height:120px;padding:10px;border:1px solid #E1E1E1;border-radius:6px;resize:none;overflow-y:auto;}
 textarea:disabled {color:#888;background:#f3f3f3;}
 
 /* input text, input password, input number, input email, input search */
-input[type="text"], input[type="password"], input[type="number"], input[type="email"], input[type="search"] {width:100%;height:48px;padding:0 10px;vertical-align:middle;border:1px solid #E1E1E1;border-radius:6px;}
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], input[type="search"] {width:100%;height:48px;padding:0 10px;vertical-align:middle;border:none;border-radius:16px;}
 input[type="text"]::placeholder, input[type="password"]::placeholder, input[type="number"]::placeholder, input[type="email"]::placeholder, input[type="search"]::placeholder {color:rgba(255,255,255,0.4);opacity:1;}
 input[type="text"]:disabled, input[type="password"]:disabled, input[type="number"]:disabled, input[type="email"]:disabled, input[type="search"]:disabled {color:#888;background:#f3f3f3;}
 input:focus::placeholder{color:transparent}
@@ -65,8 +65,8 @@ input:focus::placeholder{color:transparent}
 /* input date */
 .date_box {position:relative;}
 .date_box:after {content:"";display:inline-block;position:absolute;top:0;right:0;width:40px;height:40px;background:url("../img/form_date.png") no-repeat 0 0;}
-.date {display:block;position:relative;width:100%;height:48px;padding:0 40px 0 10px;background:#462784;text-align:left;border:1px solid #E1E1E1;border-radius:6px;}
-button.date:after {content:"";display:inline-block;position:absolute;top:0;right:0;width:40px;height:40px;background:url("../img/form_date.png") no-repeat 0 0;}
+input.date {display:block;position:relative;width:100%;height:48px;padding:0 40px 0 10px;text-align:left;}
+input.date:after {content:"";display:inline-block;position:absolute;top:0;right:0;width:40px;height:40px;background:url("../img/form_date.png") no-repeat 0 0;}
 
 /* input checkbox */
 input[type="checkbox"] {position:absolute;width:0;height:0;font-size:0;line-height:0;opacity:0;overflow:hidden;}
@@ -94,7 +94,7 @@ input[type="button"] {cursor:pointer;}
 /* select */
 select::-ms-expand {display:none;}
 .select {position:relative;}
-.select select {width:100%;height:48px;padding-left:10px;padding-right:25px;background:#462784;border:1px solid #E1E1E1;border-radius:6px;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.select select {width:100%;height:48px;padding-left:10px;padding-right:25px;background:#462784;border:none;border-radius:16px;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .select select + .ico_select {position:absolute;top:19px;right:12px;width:11px;height:6px;margin-top:-1px;background:url("../img/form_select.png") no-repeat 0 0;}
 .select select:focus + .ico_select {transform:rotate(-180deg);}
 
