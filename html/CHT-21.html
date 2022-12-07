@@ -41,6 +41,7 @@
 
 		<!-- chat_cont -->
 		<div class="chat_cont">
+
 			<!-- bot_wrap -->
 			<div class="bot_wrap">
 				<div class="bot_img">
@@ -54,97 +55,15 @@
 							무엇을 도와드릴까요?
 						</p>
 						
-						<div class="btn_grp col2">
-							<button type="button" class="btn">파일추가</button>
-							<button type="button" class="btn">완료</button>
-							<button type="button" class="btn">파일추가</button>
-							<button type="button" class="btn">완료</button>
+						<div class="menu_wrap">
+							<a href="javascript:;" class="menu_item item01">보험금<br>청구</a>
+							<a href="javascript:;" class="menu_item item02">보험료<br>알아보기</a>
+							<a href="javascript:;" class="menu_item item03">메뉴<br>조회</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- //bot_wrap -->
-
-			<!-- bot_wrap -->
-			<div class="bot_wrap">
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							<strong>사고정보</strong>를 확인해 주세요.
-						</p>
-					</div>
-				</div>
-			</div>
-			<!-- //bot_wrap -->
-
-			<!-- bot_wrap -->
-			<div class="bot_wrap">
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							<strong>보험금을 받을 입금계좌</strong>를 선택해주세요.
-						</p>
-					</div>
-				</div>
-			</div>
-			<!-- //bot_wrap -->
-
-			<!-- bot_wrap type_slider -->
-			<div class="bot_wrap type_slider">
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							안녕하세요. 롯데손해보험 챗봇입니다. 찾고자 하시는 정보를 입력 또는 선택하세요.
-						</p>
-						
-						<!-- card_wrap -->
-						<div class="card_wrap">
-							<div class="swiper-container cardswiper">
-								<ul class="swiper-wrapper">
-									<li class="swiper-slide">
-										<a href="javascript:;" class="card_box">
-											<img src="../img/img_sample.png" alt="">
-											<div class="card_txt">
-												<strong class="card_bank">신한은행</strong>
-												<p class="card_number">3775****56789012</p>
-											</div>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="javascript:;" class="card_box">
-											<img src="../img/img_sample.png" alt="">
-											<div class="card_txt">
-												<strong class="card_bank">국민은행</strong>
-												<p class="card_number">3775****56789012</p>
-											</div>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="javascript:;" class="card_box">
-											<img src="../img/img_sample.png" alt="">
-											<div class="card_txt">
-												<strong class="card_bank">하나은행</strong>
-												<p class="card_number">3775****56789012</p>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- //card_wrap -->
-					</div>
-				</div>
-			</div>
-			<!-- //bot_wrap type_slider -->
 
 			<!-- user_wrap -->
 			<div class="user_wrap">
@@ -152,12 +71,45 @@
 			</div>
 			<!-- //user_wrap -->
 
-			<!-- sticky_wrap -->
-			<!-- <div class="sticky_wrap">
-				<button type="button" class="btn">파일추가</button>
-				<button type="button" class="btn">완료</button>
-			</div> -->
-			<!-- //sticky_wrap -->
+			<!-- bot_wrap -->
+			<div class="bot_wrap">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>청구 구분</strong>을 선택해 주세요.
+						</p>
+						<div class="btn_list">
+							<a href="javascript:;" class="item is_active"><!-- 활성화 : '.is_active' 추가 -->
+								<strong class="bold">신규 청구</strong>
+								<p class="desc">처음 청구하는 사고인 경우</p>
+							</a>
+							<a href="javascript:;" class="item">
+								<strong class="bold">추가 청구</strong>
+								<p class="desc">이전에 보험금 청구한 사고인 경우</p>
+							</a>
+							<a href="javascript:;" class="item">
+								<strong class="bold">보완서류제출</strong>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap">
+				<p class="user_txt">신규 청구</p>
+			</div>
+			<!-- //user_wrap -->
+
+		</div>
+		<!-- //chat_cont -->
+
+		<!-- chat_foot -->
+		<div class="chat_foot">
 
 			<!-- refresh_wrap -->
 			<div class="refresh_wrap">
@@ -165,14 +117,9 @@
 			</div>
 			<!-- //refresh_wrap -->
 
-		</div>
-		<!-- //chat_cont -->
-
-		<!-- chat_foot -->
-		<div class="chat_foot">
 			<!-- chat_input_box -->
 			<div class="chat_input_box">
-				<input type="text" id="chat_input" placeholder="질문을 입력하세요." title="문의내용">
+				<input type="text" id="chat_input" placeholder="궁금한점을 입력하세요." title="문의내용">
 				<button type="button" class="btn_send"><span class="hide">문의 내용 전송</span></button>
 			</div>
 			<!-- //chat_input_box -->
@@ -187,6 +134,7 @@
 				</ul>
 			</div>
 			<!-- //keyword_box -->
+			
 		</div>
 		<!-- //chat_foot -->
 
