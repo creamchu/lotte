@@ -17,11 +17,19 @@ var fn = (function() {
 		//restart: function(){
 		restart : function(){
 			$("#bot_restart").clone().appendTo(".chat_cont").show();
+			$('.chat_cont').animate({
+				scrollTop: $('.chat_cont')[0].scrollHeight
+			}, 500);
+			//$(".chat_cont").animate({ scrollTop: $(document).height() }, 500);
+			//$('.chat_cont').scrollTop($('.chat_cont')[0].scrollHeight);
 		},
 
 		//init: function(){
 		init : function(){
 			$("#bot_init").clone().appendTo(".chat_cont");
+			$('.chat_cont').animate({
+				scrollTop: $('.chat_cont')[0].scrollHeight
+			}, 500);
 		},
 
 		//tab
