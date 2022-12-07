@@ -10,24 +10,18 @@ var fn = (function() {
 	return {
 		//공통
 		common : function(){
-			//bookmark
-			fn.bookmark();
-
 			//tab
 			fn.tab();
 		},
 
-		//bookmark: function(){
-		bookmark : function(){
-			$(document).on("click", ".bookmark", function(){
-				if($(this).hasClass("is-active")){
-					$(this).removeClass("is-active");
-					$(this).find('span').text("즐겨찾기 해제");
-				}else{
-					$(this).addClass("is-active");
-					$(this).find('span').text("즐겨찾기");
-				}
-			});
+		//restart: function(){
+		restart : function(){
+			$("#bot_restart").clone().appendTo(".chat_cont").show();
+		},
+
+		//init: function(){
+		init : function(){
+			$("#bot_init").clone().appendTo(".chat_cont");
 		},
 
 		//tab
