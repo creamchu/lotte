@@ -131,7 +131,7 @@ select::-ms-expand {display:none;}
 .chat_input_box {position:relative;padding:16px 24px 32px;background:#7d4fcf;border-top-left-radius:32px;border-top-right-radius:32px;z-index:1;}
 .chat_input_box input {width:100%;height:44px;padding:14px 50px 14px 20px;background:#fff;color:#000;font-size:14px;border-radius:22px;}
 .chat_input_box input::placeholder {color:rgba(0, 0, 0, .5);}
-.chat_input_box input:disabled {background:url('../img/bg_chat_disabled.png') no-repeat 0 0/100% !important;}
+.chat_input_box input:disabled {background:rgba(70, 39, 132, 0.2) url('../img/bg_chat_disabled.png') no-repeat 0 0/100% !important;}
 .chat_input_box input:disabled::placeholder {color:rgba(255, 255, 255, .4);}
 .chat_input_box input:disabled + .btn_send {background:#462784 url('../img/ico_send_disabled.png') no-repeat 50% 50%/24px;}
 .chat_input_box .btn_send {position:absolute;top:20px;right:28px;width:36px;height:36px;background:#fee90f url('../img/ico_send.png') no-repeat 50% 50%/25px;border-radius:36px;}
