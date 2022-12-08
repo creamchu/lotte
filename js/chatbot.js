@@ -10,24 +10,26 @@ var fn = (function() {
 	return {
 		//공통
 		common : function(){
+			//fromFocus
+			fn.fromFocus();
+
 			//tab
 			fn.tab();
 		},
-
-		//restart: function(){
-		restart : function(){
-			$("#bot_restart").clone().appendTo(".chat_cont").show();
-			$('.chat_cont').animate({
-				scrollTop: $('.chat_cont')[0].scrollHeight
-			}, 400);
-		},
-
-		//init: function(){
-		init : function(){
-			$("#bot_init").clone().appendTo(".chat_cont");
-			$('.chat_cont').animate({
-				scrollTop: $('.chat_cont')[0].scrollHeight
-			}, 400);
+		
+		//fromFocus: function(){
+		fromFocus : function(){
+			function formValuCheck(e) {
+				if(e.val().trim() == ""){
+					e.closest(".form_item").removeClass("is_complete");
+				}else {
+					e.closest(".form_item").addClass("is_complete");
+				}
+			}
+			$(document).on("focus blur change", ".form_item input", function(){
+				var e = $(this);
+				formValuCheck(e);
+			});
 		},
 
 		//tab
@@ -39,11 +41,27 @@ var fn = (function() {
 			});
 		},
 
+		//restart
+		restart : function(){
+			$("#bot_restart").clone().appendTo(".chat_cont").show();
+			$('.chat_cont').animate({
+				scrollTop: $('.chat_cont')[0].scrollHeight
+			}, 400);
+		},
+
+		//init
+		init : function(){
+			$("#bot_init").clone().appendTo(".chat_cont");
+			$('.chat_cont').animate({
+				scrollTop: $('.chat_cont')[0].scrollHeight
+			}, 400);
+		},
+
 	}
 })();
 
 
-$(window).on('load', function(){
+$(document).on('ready', function(){
 	//init
 	fn.common();
 	

@@ -75,33 +75,44 @@
 			<button type="button" class="btn round">타인</button>
 		</div>
 
-		<div class="btn_list">
+		<div class="btn_list type_desc">
 			<a href="javascript:;" class="item is_active"><!-- 활성화 : '.is_active' 추가 -->
-				<strong>김롯데 (1970.0101)</strong>
+				<strong>신규 청구</strong>
+				<p class="desc">처음 청구하는 사고인 경우</p>
 			</a>
 			<a href="javascript:;" class="item">
-				<strong>김*째 (2011.02.02)</strong>
+				<strong>추가 청구</strong>
+				<p class="desc">이전에 보험금 청구한 사고인 경우</p>
 			</a>
 			<a href="javascript:;" class="item">
-				<strong>김*째 (2013.01.01)</strong>
+				<strong>보완서류제출</strong>
 			</a>
 		</div>
-		<!-- //버튼 -->
 
-		<h2 class="guide_tit">타이틀</h2>
-		<h2 class="h2_title">h2 타이틀입니다.</h2>
+		<div class="btn_list">
+			<a href="javascript:;" class="item is_active">김롯데 (1970.0101)</a><!-- 활성화 : '.is_active' 추가 -->
+			<a href="javascript:;" class="item">김*째 (2011.02.02)</a>
+			<a href="javascript:;" class="item">김*째 (2013.01.01)</a>
+		</div>
+		<!-- //버튼 -->
 
 		<h2 class="guide_tit">input</h2>
 		<input type="text" placeholder="가나다라마바사">
 		<input type="password">
-		<input type="number">
-		<input type="email">
-		<input type="search">
-		<input type="text" value="가나다라마바사">
-		<input type="text" disabled>
 		<input type="text" value="disabled" disabled>
-		<div class="date">
-			<input type="text" placeholder="2022.12.25">
+		<div class="date_box">
+			<input type="text" placeholder="일자 선택" value="2022.12.25" class="date" readonly>
+		</div>
+		<div class="select_box">
+			<input type="text" placeholder="선택" value="2022.12.25" class="select" readonly>
+		</div>
+		
+		<h2 class="guide_tit">select</h2>
+		<div class="select_box">
+			<select class="select">
+				<option>선택</option>
+				<option>1</option>
+			</select>
 		</div>
 
 		<h2 class="guide_tit">checkbox</h2>
