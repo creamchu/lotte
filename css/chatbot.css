@@ -47,7 +47,7 @@
 
 /* btn_list */
 .btn_list {margin-top:20px;}
-.btn_list .item {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;min-height:56px;padding:16px 24px;background:#7a4ccb;color:#fff;font-weight:400;border-radius:24px;}
+.btn_list .item {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;min-height:56px;padding:16px 24px;background:#7a4ccb;color:#fff;font-weight:400;text-align:left;border-radius:24px;}
 .btn_list .item + .item {margin-top:12px;}
 .btn_list .item.is_active {background:#fee90f;color:#000;font-weight:700;}
 
@@ -257,5 +257,5 @@ select::-ms-expand {display:none;}
 .tab .tab_menu > a:before {content:"";position:absolute;top:4px;left:-16px;width:1px;height:18px;background:#B3B3B3;}
 .tab .tab_menu > a:first-child:before {display:none;}
 .tab .tab_cont > div {display:none;}
-.tab .tab_menu > a.active {color:#475DAD;}
-.tab .tab_cont > div.active {display:block;}
+.tab .tab_menu > a.is_active {color:#475DAD;}
+.tab .tab_cont > div.is_active {display:block;}
