@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="45" viewBox="0 0 20 45">
+  <g id="그룹_626245" data-name="그룹 626245" transform="translate(7096 20746)">
+    <g id="Radio_check_20" transform="translate(-7096 -20746)">
+      <rect id="box" width="20" height="20" rx="10" opacity="0.4"/>
+    </g>
+    <g id="Radio_check_20-2" data-name="Radio_check_20" transform="translate(-7096 -20721)">
+      <rect id="box-2" data-name="box" width="20" height="20" rx="10" opacity="0.4"/>
+      <rect id="box-3" data-name="box" width="8" height="8" rx="4" transform="translate(6 6)" fill="#ffe90f"/>
+    </g>
+  </g>
+</svg>

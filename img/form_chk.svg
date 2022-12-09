@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="45" viewBox="0 0 20 45">
+  <g id="그룹_626245" data-name="그룹 626245" transform="translate(16409 20176)">
+    <g id="check_box_20" transform="translate(-16409 -20176)">
+      <rect id="box" width="20" height="20" rx="8" fill="#ddd"/>
+    </g>
+    <g id="check_box_20-2" data-name="check_box_20" transform="translate(-16409 -20151)">
+      <rect id="box-2" data-name="box" width="20" height="20" rx="8" fill="#ffe90f"/>
+      <g id="check" transform="translate(-321 -58)">
+        <rect id="area" width="20" height="20" transform="translate(321 58)" fill="none" opacity="0.394"/>
+        <path id="합치기_14" data-name="합치기 14" d="M18931.141,15274.914l-2.3-2.306a.714.714,0,0,1,1.014-1.007l1.795,1.8,5.053-5.052a.714.714,0,1,1,1.012,1.008l-5.555,5.561a.717.717,0,0,1-1.014,0Z" transform="translate(-18602.273 -15203.52)"/>
+      </g>
+    </g>
+  </g>
+</svg>
