@@ -19,20 +19,12 @@ var fn = (function() {
 		
 		//fromFocus
 		fromFocus : function(){
-			// function formValuCheck(e) {
-			// 	if(e.val().trim() == ""){
-			// 		e.closest(".form_item").removeClass("is_complete");
-			// 	}else {
-			// 		e.closest(".form_item").addClass("is_complete");
-			// 	}
-			// }
 			$(document).on("focus blur change", ".form_item input", function(){
-				// var e = $(this);
-				// formValuCheck(e);
-				if($(this).val().trim() == ""){
-					$(this).closest(".form_item").removeClass("is_complete");
+				var $this = $(this);
+				if($this.val().trim() == ""){
+					$this.closest(".form_item").removeClass("is_complete");
 				}else {
-					$(this).closest(".form_item").addClass("is_complete");
+					$this.closest(".form_item").addClass("is_complete");
 				}
 			});
 		},
@@ -40,8 +32,9 @@ var fn = (function() {
 		//tab
 		tab : function(){
 			$(document).on("click", ".tab-menu a", function() {
-				var index = $(this).index();
-				$(this).addClass("active").siblings().removeClass("active");
+				var $this = $(this);
+				var index = $this.index();
+				$this.addClass("active").siblings().removeClass("active");
 				$(".tab-cont > div").eq(index).addClass("active").siblings().removeClass("active");
 			});
 		},
