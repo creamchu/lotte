@@ -29,48 +29,11 @@
 		<!-- chat_cont -->
 		<div class="chat_cont">
 
-			<!-- bot_wrap -->
-			<div id="bot_restart" class="bot_wrap" style="display:none;"><!-- 초기셋팅 봇 : bot_restart -->
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							진행중인 작업이 있어요?<br>
-							퀵 메뉴로 이동하면 기존 작업은 사라져요..
-						</p>
-						<div class="btn_wrap col2">
-							<a href="javascript:;" class="btn big round black">계속진행</a>
-							<a href="javascript:;" class="btn big round purple" onclick="fn.init();">처음으로</a>
-						</div>
-					</div>
-				</div>
+			<!-- D: 마크업 확인용으로 개발시 제외해주세요. -->
+			<div style="margin:40px 0;">
+				<button type="button" class="btn" onclick="$('.keyword_box').toggleClass('is_active');">자동완성 레이어</button>
 			</div>
-			<!-- //bot_wrap -->
-
-			<!-- bot_wrap -->
-			<div id="bot_init" class="bot_wrap"><!-- 초기진입 봇 : bot_init -->
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							안녕하세요!<br>
-							롯데손해보험 챗봇 OOO 예요.<br>
-							무엇을 도와드릴까요?
-						</p>
-						
-						<div class="menu_wrap">
-							<a href="javascript:;" class="menu_item item_1">보험금<br>청구</a>
-							<a href="javascript:;" class="menu_item item_2">보험료<br>알아보기</a>
-							<a href="javascript:;" class="menu_item item_3">메뉴<br>조회</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //bot_wrap -->
+			<!-- //D: 마크업 확인용으로 개발시 제외해주세요. -->
 
 		</div>
 		<!-- //chat_cont -->
@@ -86,7 +49,7 @@
 
 			<!-- chat_input_box -->
 			<div class="chat_input_box">
-				<input type="text" id="chat_input" placeholder="궁금한점을 입력하세요." title="문의내용" disabled><!-- 비활성화 : disabled 속성 추가 -->
+				<input type="text" id="chat_input" placeholder="궁금한점을 입력하세요." title="문의내용"><!-- 비활성화 : disabled 속성 추가 -->
 				<button type="button" class="btn_send"><span class="hide">문의 내용 전송</span></button>
 			</div>
 			<!-- //chat_input_box -->

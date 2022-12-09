@@ -30,47 +30,37 @@
 		<div class="chat_cont">
 
 			<!-- bot_wrap -->
-			<div id="bot_restart" class="bot_wrap" style="display:none;"><!-- 초기셋팅 봇 : bot_restart -->
+			<div class="bot_wrap">
 				<div class="bot_img">
 					<span class="ico ico_bot"></span>
 				</div>
 				<div class="bot_box">
 					<div class="bot_box_inner">
 						<p class="bot_txt">
-							진행중인 작업이 있어요?<br>
-							퀵 메뉴로 이동하면 기존 작업은 사라져요..
+							2022년 00월 00일<br>
+							작성 중인 청구 건이 있어요.<br>
+							이어서 작성 하시겠어요?
 						</p>
 						<div class="btn_wrap col2">
-							<a href="javascript:;" class="btn big round black">계속진행</a>
-							<a href="javascript:;" class="btn big round purple" onclick="fn.init();">처음으로</a>
+							<a href="javascript:;" class="btn big round black">아니요</a>
+							<a href="javascript:;" class="btn big round purple" onclick="fn.init();">이어하기</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- //bot_wrap -->
 
-			<!-- bot_wrap -->
-			<div id="bot_init" class="bot_wrap"><!-- 초기진입 봇 : bot_init -->
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							안녕하세요!<br>
-							롯데손해보험 챗봇 OOO 예요.<br>
-							무엇을 도와드릴까요?
-						</p>
-						
-						<div class="menu_wrap">
-							<a href="javascript:;" class="menu_item item_1">보험금<br>청구</a>
-							<a href="javascript:;" class="menu_item item_2">보험료<br>알아보기</a>
-							<a href="javascript:;" class="menu_item item_3">메뉴<br>조회</a>
-						</div>
-					</div>
-				</div>
+			<!-- user_wrap -->
+			<div class="user_wrap"><!-- '이어하기'일 경우 -->
+				<p class="user_txt">청구 계속 진행해줘</p>
 			</div>
-			<!-- //bot_wrap -->
+			<!-- //user_wrap -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap"><!-- '아니요'일 경우 -->
+				<p class="user_txt">아니 새로 할래</p>
+			</div>
+			<!-- //user_wrap -->
 
 		</div>
 		<!-- //chat_cont -->

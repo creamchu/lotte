@@ -30,62 +30,6 @@
 		<div class="chat_cont">
 
 			<!-- bot_wrap -->
-			<div id="bot_init" class="bot_wrap"><!-- 초기진입 봇 : bot_init -->
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							안녕하세요!<br>
-							롯데손해보험 챗봇 OOO 예요.<br>
-							무엇을 도와드릴까요?
-						</p>
-						
-						<div class="menu_wrap">
-							<a href="javascript:;" class="menu_item item_1">보험금<br>청구</a>
-							<a href="javascript:;" class="menu_item item_2">보험료<br>알아보기</a>
-							<a href="javascript:;" class="menu_item item_3">메뉴<br>조회</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //bot_wrap -->
-
-			<!-- user_wrap -->
-			<div class="user_wrap">
-				<p class="user_txt">보험료 알아보기</p>
-			</div>
-			<!-- //user_wrap -->
-
-			<!-- bot_wrap -->
-			<div class="bot_wrap">
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							보험상품은 본인, 타인, 자녀 상품으로 준비되어 있어요.
-							<span class="block">어떤 상품으로 안내해 드릴까요?</span>
-						</p>
-						<div class="btn_wrap col3">
-							<a href="javascript:;" class="btn round">본인</a>
-							<a href="javascript:;" class="btn round">자녀</a>
-							<a href="javascript:;" class="btn round">타인</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //bot_wrap -->
-
-			<!-- user_wrap -->
-			<div class="user_wrap">
-				<p class="user_txt">내 보험료</p>
-			</div>
-			<!-- //user_wrap -->
-
-			<!-- bot_wrap -->
 			<div class="bot_wrap">
 				<div class="bot_img">
 					<span class="ico ico_bot"></span>
@@ -101,35 +45,27 @@
 								<legend>입력 폼</legend>
 								<ul>
 									<li class="form_item">
-										<span class="form_tit">생년월일</span>
-										<div class="form_unit date_box">
+										<span class="form_tit">사고내용 textarea</span>
+										<textarea maxlength="200"></textarea>
+										<p class="form_desc">서류의 진단명 또는 청구유형 정보이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+									<li class="form_item">
+										<span class="form_tit">사고내용</span>
+										<input type="text">
+										<p class="form_desc">서류의 진단명 또는 청구유형 정보이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+									<li class="form_item">
+										<span class="form_tit">사고일자</span>
+										<input type="text" placeholder="일자 선택" value="s">
+										<p class="form_desc">서류의 진단일 또는 청구 접수일 이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+									<li class="form_item">
+										<span class="form_tit">사고장소</span>
+										<div class="date_box">
 											<input type="text" placeholder="일자 선택" class="date" readonly>
-										</div>
-									</li>
-									<li class="form_item">
-										<span class="form_tit">성별</span>
-										<div class="form_unit radio_box">
-											<label>
-												<input type="radio" name="radio">
-												<span>남자</span>
-											</label>
-											<label>
-												<input type="radio" name="radio">
-												<span>여자</span>
-											</label>
-										</div>
-									</li>
-									<li class="form_item">
-										<span class="form_tit">성별</span>
-										<div class="form_unit radio_box">
-											<label>
-												<input type="radio" name="radio2" checked>
-												<span>남자</span>
-											</label>
-											<label>
-												<input type="radio" name="radio2">
-												<span>여자</span>
-											</label>
 										</div>
 									</li>
 								</ul>
