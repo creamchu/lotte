@@ -17,18 +17,23 @@ var fn = (function() {
 			fn.tab();
 		},
 		
-		//fromFocus: function(){
+		//fromFocus
 		fromFocus : function(){
-			function formValuCheck(e) {
-				if(e.val().trim() == ""){
-					e.closest(".form_item").removeClass("is_complete");
-				}else {
-					e.closest(".form_item").addClass("is_complete");
-				}
-			}
+			// function formValuCheck(e) {
+			// 	if(e.val().trim() == ""){
+			// 		e.closest(".form_item").removeClass("is_complete");
+			// 	}else {
+			// 		e.closest(".form_item").addClass("is_complete");
+			// 	}
+			// }
 			$(document).on("focus blur change", ".form_item input", function(){
-				var e = $(this);
-				formValuCheck(e);
+				// var e = $(this);
+				// formValuCheck(e);
+				if($(this).val().trim() == ""){
+					$(this).closest(".form_item").removeClass("is_complete");
+				}else {
+					$(this).closest(".form_item").addClass("is_complete");
+				}
 			});
 		},
 
