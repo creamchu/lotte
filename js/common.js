@@ -22,6 +22,7 @@ var fn = (function() {
 		
 		//fromFocus
 		fromFocus : function(){
+
 			//value 유무에 따른 활성화/비활성화
 			function formValuCheck($this) {
 				if($this.val().trim() == ""){
@@ -43,9 +44,19 @@ var fn = (function() {
 				}
 			});
 
-			//value 유무 체크 : 동작 event
+			//input event에 따른 value 유무 체크
 			$(document).on("focus blur change", ".form_item input, .form_item textarea", function(){
 				formValuCheck($(this));
+			});
+
+			//button event에 따른 value 유무 체크
+			$(document).on("focus blur", ".form_item .form_btn", function(){
+				var $this = $(this).siblings("input");
+				if($this.val().trim() == ""){
+					$this.closest(".form_item").removeClass("is_complete");
+				}else {
+					$this.closest(".form_item").addClass("is_complete");
+				}
 			});
 		},
 		
