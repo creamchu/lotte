@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../css/chatbot.css">
 	<script src="../js/jquery_2.1.1.min.js"></script>
 	<script src="../js/jquery_library.js"></script>
-	<script src="../js/common.js"></script>
+	<script src="../js/ui.chatbot.js"></script>
 	<!-- //source -->
 </head>
 
@@ -39,39 +39,41 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">사고정보</strong>를 확인해 주세요.
 						</p>
-						<fieldset class="form_field">
-							<legend>사고정보 정보 입력</legend>
-							<ul>
-								<li class="form_item">
-									<span class="form_tit">사고내용</span>
-									<div class="form_unit">
-										<textarea maxlength="200" placeholder="내용 입력(200자 이내)"></textarea>
-										<span class="form_txt2">( 1 / 200자 )</span>
-									</div>
-									<p class="form_txt">서류의 진단명 또는 청구유형 정보이며,
-										필요 시 수정해 주세요.</p>
-								</li>
-								<li class="form_item">
-									<span class="form_tit">사고일자</span>
-									<div class="form_unit form_date">
-										<input type="text" placeholder="일자 선택" class="date" readonly>
-									</div>
-									<p class="form_txt">서류의 진단일 또는 청구 접수일 이며,
-										필요 시 수정해 주세요.</p>
-								</li>
-								<li class="form_item">
-									<span class="form_tit">사고장소</span>
-									<div class="form_unit form_address">
-										<input type="text" placeholder="주소 입력" readonly>
-										<button type="button" class="form_btn ico_search"><span class="hide">주소검색</span></button>
-									</div>
-									<div class="form_unit form_address">
-										<input type="text" readonly>
-										<button type="button" class="form_btn"><span class="hide">주소검색</span></button>
-									</div>
-								</li>
-							</ul>
-						</fieldset>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>사고정보 정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">사고내용</span>
+										<div class="form_unit">
+											<textarea maxlength="200" placeholder="내용 입력(200자 이내)"></textarea>
+											<span class="form_txt2">( 1 / 200자 )</span>
+										</div>
+										<p class="form_txt">서류의 진단명 또는 청구유형 정보이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+									<li class="form_item">
+										<span class="form_tit">사고일자</span>
+										<div class="form_unit form_date">
+											<input type="text" placeholder="일자 선택" class="date" readonly>
+										</div>
+										<p class="form_txt">서류의 진단일 또는 청구 접수일 이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+									<li class="form_item">
+										<span class="form_tit">사고장소</span>
+										<div class="form_unit form_address">
+											<input type="text" placeholder="주소 입력" readonly>
+											<button type="button" class="form_btn ico_search"><span class="hide">주소검색</span></button>
+										</div>
+										<div class="form_unit form_address">
+											<input type="text" readonly>
+											<button type="button" class="form_btn"><span class="hide">주소검색</span></button>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button><!-- 비활성화 : disabled 속성 추가 -->
 						</div>
@@ -96,69 +98,75 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">보험금을 받을 입금계좌</strong>를 선택해주세요.
 						</p>
-						<fieldset class="form_field">
-							<legend>입금계좌 선택</legend>
-							<h2 class="h2_tit">입금계좌</h2>
-							<div class="pay_list">
-								<!--
-									계좌 분기 : 클래스, 텍스트 변경
-									우정사업본부 : label.post
-									KB국민은행 : label.kb
-									하나은행 : label.hana
-								-->
-								<label class="post">
-									<input type="radio" name="radio">
-									<span><span class="hide">우정사업본부</span></span>
-									<div class="pay_cont">
-										<span class="pay_logo"></span>
-										<dl class="pay_info">
-											<dt>계좌번호</dt>
-											<dd class="pay_num">
-												<span>56789012</span>
-												<span class="masking">****</span>
-												<span>56789012</span>
-											</dd>
-											<dd class="pay_radio">
-											</dd>
-										</dl>
-									</div>
-								</label>
-								<label class="kb">
-									<input type="radio" name="radio">
-									<span><span class="hide">KB국민은행</span></span>
-									<div class="pay_cont">
-										<span class="pay_logo"></span>
-										<dl class="pay_info">
-											<dt>계좌번호</dt>
-											<dd class="pay_num">
-												<span>56789012</span>
-												<span class="masking">****</span>
-												<span>56789012</span>
-											</dd>
-											<dd class="pay_radio">
-											</dd>
-										</dl>
-									</div>
-								</label>
-								<label class="hana">
-									<input type="radio" name="radio">
-									<span><span class="hide">하나은행</span></span>
-									<div class="pay_cont">
-										<span class="pay_logo"></span>
-										<dl class="pay_info">
-											<dt>계좌번호</dt>
-											<dd class="pay_num">
-												<span>56789012</span>
-												<span class="masking">****</span>
-												<span>56789012</span>
-											</dd>
-											<dd class="pay_radio">
-											</dd>
-										</dl>
-									</div>
-								</label>
-							</div>
-						</fieldset>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>입금계좌 선택</legend>
+								<h2 class="h2_tit">입금계좌</h2>
+								<ul>
+									<li class="form_item">
+										<div class="pay_list">
+											<!--
+												계좌 분기 : 클래스, 텍스트 변경
+												우정사업본부 : label.post
+												KB국민은행 : label.kb
+												하나은행 : label.hana
+											-->
+											<label class="post">
+												<input type="radio" name="radio">
+												<span><span class="hide">우정사업본부</span></span>
+												<div class="pay_cont">
+													<span class="pay_logo"></span>
+													<dl class="pay_info">
+														<dt>계좌번호</dt>
+														<dd class="pay_num">
+															<span>56789012</span>
+															<span class="masking">****</span>
+															<span>56789012</span>
+														</dd>
+														<dd class="pay_radio">
+														</dd>
+													</dl>
+												</div>
+											</label>
+											<label class="kb">
+												<input type="radio" name="radio">
+												<span><span class="hide">KB국민은행</span></span>
+												<div class="pay_cont">
+													<span class="pay_logo"></span>
+													<dl class="pay_info">
+														<dt>계좌번호</dt>
+														<dd class="pay_num">
+															<span>56789012</span>
+															<span class="masking">****</span>
+															<span>56789012</span>
+														</dd>
+														<dd class="pay_radio">
+														</dd>
+													</dl>
+												</div>
+											</label>
+											<label class="hana">
+												<input type="radio" name="radio">
+												<span><span class="hide">하나은행</span></span>
+												<div class="pay_cont">
+													<span class="pay_logo"></span>
+													<dl class="pay_info">
+														<dt>계좌번호</dt>
+														<dd class="pay_num">
+															<span>56789012</span>
+															<span class="masking">****</span>
+															<span>56789012</span>
+														</dd>
+														<dd class="pay_radio">
+														</dd>
+													</dl>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button>
 						</div>
@@ -183,18 +191,20 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">요청자 휴대폰 번호</strong>를 입력해 주세요.
 						</p>
-						<fieldset class="form_field">
-							<legend>요청자 휴대폰 번호 정보 입력</legend>
-							<ul>
-								<li class="form_item">
-									<span class="form_tit">요청자 휴대폰 번호</span>
-									<div class="form_unit">
-										<input type="text" maxlength="13" placeholder="'-' 없이 입력">
-										<p class="form_validate">올바르게 입력해 주세요.</p>
-									</div>
-								</li>
-							</ul>
-						</fieldset>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>요청자 휴대폰 번호 정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">요청자 휴대폰 번호</span>
+										<div class="form_unit">
+											<input type="text" maxlength="13" placeholder="'-' 없이 입력">
+											<p class="form_validate">올바르게 입력해 주세요.</p>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button>
 						</div>
@@ -219,27 +229,26 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">의료급여 수급권자 여부</strong>를 선택해 주세요.
 						</p>
-						<fieldset class="form_field">
-							<legend>의료급여 수급권자 여부 선택</legend>
-							<ul>
-								<li class="form_item">
-									<span class="form_tit">의료급여 수급권자 여부</span>
-									<div class="form_unit form_radio_btn">
-										<label>
-											<input type="radio" name="radio" checked>
-											<span>해당없음</span>
-										</label>
-										<label>
-											<input type="radio" name="radio">
-											<span>해당함</span>
-										</label>
-									</div>
-								</li>
-							</ul>
-						</fieldset>
-						<div class="btn_wrap">
-							<button type="button" class="btn big">확인</button>
-						</div>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>의료급여 수급권자 여부 선택</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">의료급여 수급권자 여부</span>
+										<div class="form_unit form_radio_btn">
+											<label>
+												<input type="radio" name="radio">
+												<span>해당없음</span>
+											</label>
+											<label>
+												<input type="radio" name="radio">
+												<span>해당함</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -261,11 +270,13 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">보험금을 받을 입금계좌</strong>를 등록해 주세요.
 						</p>
-						<fieldset class="form_field">
-							<legend>입금계좌 선택</legend>
-							<h2 class="h2_tit">입금계좌</h2>
-							<button type="button" class="pay_btn">계좌번호 등록</button>
-						</fieldset>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>입금계좌 선택</legend>
+								<h2 class="h2_tit">입금계좌</h2>
+								<button type="button" class="pay_btn">계좌번호 등록</button>
+							</fieldset>
+						</form>
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button><!-- 비활성화 : disabled 속성 추가 -->
 						</div>
@@ -284,11 +295,53 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">보험금을 받을 입금계좌</strong>를 등록해 주세요.
 						</p>
-						<fieldset class="form_field">
-							<legend>입금계좌 선택</legend>
-							<h2 class="h2_tit">입금계좌</h2>
-							<button type="button" class="pay_btn">계좌번호 등록</button>
-						</fieldset>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>입금계좌 선택</legend>
+								<div class="tab_wrap">
+									<ul class="tab_menu">
+										<li class="form_item">
+											<span class="form_tit">예금주</span>
+											<div class="form_unit form_radio_btn">
+												<label>
+													<input type="radio" name="radio" checked>
+													<span>본인</span>
+												</label>
+												<label>
+													<input type="radio" name="radio">
+													<span>김*은</span>
+												</label>
+											</div>
+										</li>
+									</ul>
+									<div class="tab_cont">
+										<div class="tab_item is_active">
+											<h2 class="h2_tit">입금계좌</h2>
+											<button type="button" class="pay_btn">계좌번호 등록</button>
+										</div>
+										<div class="tab_item">
+											<ul>
+												<li class="form_item">
+													<span class="form_tit">은행/증권사</span>
+													<div class="form_unit form_sel">
+														<input type="text" placeholder="선택" class="sel" readonly>
+														<button type="button" class="form_btn ico_sel"><span class="hide">선택</span></button>
+														<p class="form_validate">올바르게 입력해 주세요.</p>
+													</div>
+												</li>
+												<li class="form_item">
+													<span class="form_tit">계좌번호</span>
+													<div class="form_unit">
+														<input type="text" placeholder="'-' 없이 입력">
+														<p class="form_validate">올바르게 입력해 주세요.</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button><!-- 비활성화 : disabled 속성 추가 -->
 						</div>

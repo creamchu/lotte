@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../css/chatbot.css">
 	<script src="../js/jquery_2.1.1.min.js"></script>
 	<script src="../js/jquery_library.js"></script>
-	<script src="../js/common.js"></script>
+	<script src="../js/ui.chatbot.js"></script>
 	<!-- //source -->
 </head>
 
@@ -96,30 +96,32 @@
 							<strong>보험료 바로 확인하기</strong>
 							<span class="block">보험료 확인을 위해 아래의 정보를 입력해 주세요.</span>
 						</p>
-						<fieldset class="form_field">
-							<legend>정보 입력</legend>
-							<ul>
-								<li class="form_item">
-									<span class="form_tit">생년월일</span>
-									<div class="form_unit form_date">
-										<input type="text" placeholder="일자 선택" class="date" readonly>
-									</div>
-								</li>
-								<li class="form_item">
-									<span class="form_tit">성별</span>
-									<div class="form_unit form_radio">
-										<label>
-											<input type="radio" name="radio">
-											<span>남자</span>
-										</label>
-										<label>
-											<input type="radio" name="radio">
-											<span>여자</span>
-										</label>
-									</div>
-								</li>
-							</ul>
-						</fieldset>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">생년월일</span>
+										<div class="form_unit form_date">
+											<input type="text" placeholder="일자 선택" class="date" readonly>
+										</div>
+									</li>
+									<li class="form_item">
+										<span class="form_tit">성별</span>
+										<div class="form_unit form_radio">
+											<label>
+												<input type="radio" name="radio">
+												<span>남자</span>
+											</label>
+											<label>
+												<input type="radio" name="radio">
+												<span>여자</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button>
 						</div>
@@ -139,53 +141,55 @@
 							<strong>보험료 바로 확인하기</strong>
 							<span class="block">보험료 확인을 위해 아래의 정보를  입력 해 주세요.</span>
 						</p>
-						<fieldset class="form_field">
-							<legend>정보 입력</legend>
-							<ul>
-								<li class="form_item">
-									<span class="form_tit">성별</span>
-									<div class="form_unit form_radio">
-										<label>
-											<input type="radio" name="radio2">
-											<span>남자</span>
-										</label>
-										<label>
-											<input type="radio" name="radio2">
-											<span>여자</span>
-										</label>
-									</div>
-								</li>
-								<li class="form_item">
-									<span class="form_tit">연령대</span>
-									<div class="form_unit form_radio">
-										<label>
-											<input type="radio" name="radio3">
-											<span>19세 이하</span>
-										</label>
-										<label>
-											<input type="radio" name="radio3">
-											<span>20 ~ 29세</span>
-										</label>
-										<label>
-											<input type="radio" name="radio3">
-											<span>30 ~ 39세</span>
-										</label>
-										<label>
-											<input type="radio" name="radio3">
-											<span>40 ~ 49세</span>
-										</label>
-										<label>
-											<input type="radio" name="radio3">
-											<span>50 ~ 59세</span>
-										</label>
-										<label>
-											<input type="radio" name="radio3">
-											<span>60세 이상</span>
-										</label>
-									</div>
-								</li>
-							</ul>
-						</fieldset>
+						<form class="form_wrap">
+							<fieldset>
+								<legend>정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">성별</span>
+										<div class="form_unit form_radio">
+											<label>
+												<input type="radio" name="radio2">
+												<span>남자</span>
+											</label>
+											<label>
+												<input type="radio" name="radio2">
+												<span>여자</span>
+											</label>
+										</div>
+									</li>
+									<li class="form_item">
+										<span class="form_tit">연령대</span>
+										<div class="form_unit form_radio">
+											<label>
+												<input type="radio" name="radio3">
+												<span>19세 이하</span>
+											</label>
+											<label>
+												<input type="radio" name="radio3">
+												<span>20 ~ 29세</span>
+											</label>
+											<label>
+												<input type="radio" name="radio3">
+												<span>30 ~ 39세</span>
+											</label>
+											<label>
+												<input type="radio" name="radio3">
+												<span>40 ~ 49세</span>
+											</label>
+											<label>
+												<input type="radio" name="radio3">
+												<span>50 ~ 59세</span>
+											</label>
+											<label>
+												<input type="radio" name="radio3">
+												<span>60세 이상</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button>
 						</div>
