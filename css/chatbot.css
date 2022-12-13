@@ -16,6 +16,7 @@
 /* color */
 .color_black {color:#000 !important;}
 .color_white {color:#fff !important;}
+.color_yellow {color:#FEE90F !important;}
 
 /* font */
 .light {font-weight:300 !important;}
@@ -206,16 +207,16 @@ select::-ms-expand {display:none;}
 .menu_wrap .menu_item.item_3 {background-color:#FEE90F;}
 .menu_wrap .menu_item.item_3:before {background-image:url('../img/ico_menu_3.png');}
 
-/* form_wrap */
-.form_wrap {margin:0 -8px;padding:16px;background:#522E92;border-radius:24px;}
-.form_wrap .form_item {margin-top:16px;}
-.form_wrap .form_item:first-child {margin-top:0;}
-.form_wrap .form_item.is_complete .form_tit {color:rgba(255, 255, 255, .32);transition:all .3s;}
-.form_wrap .form_tit {display:block;margin-bottom:12px;color:#fff;font-size:14px;font-weight:300;transition:all .4s;}
-.form_wrap .form_txt {margin-top:4px;padding-left:16px;line-height:16px;color:rgba(255, 255, 255, .5);font-size:12px;}
-.form_wrap .form_txt2 {position:absolute;top:-28px;right:0;color:rgba(255, 255, 255, .5);font-size:14px;font-weight:300;}
-.form_wrap .form_validate {display:inline-block;position:absolute;z-index:2;right:8px;bottom:100%;margin-bottom:-4px;padding:4px 8px;color:#fff;font-size:11px;border-radius:22px;background:#d61313;white-space:nowrap;transition:0.3s ease opacity;}
-.form_wrap .form_validate:after {content:"";display:block;position:absolute;top:100%;right:10px;width:9px;height:9px;}
+/* form_field */
+.form_field {margin:0 -8px;padding:16px;background:#522E92;border-radius:24px;}
+.form_field .form_item {margin-top:16px;}
+.form_field .form_item:first-child {margin-top:0;}
+.form_field .form_item.is_complete .form_tit {color:rgba(255, 255, 255, .32);transition:all .3s;}
+.form_field .form_tit {display:block;margin-bottom:12px;color:#fff;font-size:14px;font-weight:300;transition:all .4s;}
+.form_field .form_txt {margin-top:4px;padding-left:16px;line-height:16px;color:rgba(255, 255, 255, .5);font-size:12px;}
+.form_field .form_txt2 {position:absolute;top:-28px;right:0;color:rgba(255, 255, 255, .5);font-size:14px;font-weight:300;}
+.form_field .form_validate {display:inline-block;position:absolute;z-index:2;right:8px;bottom:100%;margin-bottom:-4px;padding:4px 8px;color:#fff;font-size:11px;border-radius:22px;background:#d61313;white-space:nowrap;transition:0.3s ease opacity;}
+.form_field .form_validate:after {content:"";display:block;position:absolute;top:100%;right:10px;width:9px;height:9px;}
 
 /* form_unit */
 .form_unit {position:relative;}
@@ -286,6 +287,8 @@ select::-ms-expand {display:none;}
 .pay_list .pay_info {margin-top:38px;}
 .pay_list .pay_info dt {margin-bottom:4px;color:#fff;font-size:12px;font-weight:400;opacity:0.5;}
 .pay_list .pay_info .pay_num {color:#fff;font-size:14px;font-weight:700;}
+.pay_btn {display:block;width:100%;margin-top:12px;padding:32px;background:rgba(70, 39, 132, .5);color:#fff;font-size:14px;font-weight:700;border:1px dashed rgba(255, 255, 255, .25);border-radius:8px 8px 16px 16px;}
+.pay_btn:before {content:"";display:block;width:32px;height:32px;margin:0 auto 12px;background:url("../img/ico_pay.png") no-repeat 0 0/100%;}
 
 /* pay_list case별 css */
 .pay_list label.post .pay_cont {background:#D90000;}
