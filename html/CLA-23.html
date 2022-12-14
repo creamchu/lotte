@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>롯데손해보험 챗봇</title>
+	<!-- source// -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/jquery_library.css">
+	<link rel="stylesheet" href="../css/chatbot.css">
+	<script src="../js/jquery_2.1.1.min.js"></script>
+	<script src="../js/jquery_library.js"></script>
+	<script src="../js/ui.chatbot.js"></script>
+	<!-- //source -->
+</head>
+
+<body>
+	<!-- 스킵네비게이션 -->
+	<div id="skip">
+		<a href="#chat_input">채팅대화창 바로가기</a>
+	</div>
+	<!-- //스킵네비게이션 -->
+
+	<!-- chat_wrap -->
+	<div id="chat_wrap">
+
+		<!-- chat_cont -->
+		<div class="chat_cont">
+
+			<!-- bot_wrap -->
+			<div id="bot_init" class="bot_wrap"><!-- 초기진입 봇 : bot_init -->
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							안녕하세요!<br>
+							롯데손해보험 챗봇 OOO 예요.<br>
+							무엇을 도와드릴까요?
+						</p>
+						
+						<div class="menu_wrap">
+							<a href="javascript:;" class="menu_item item_1">보험금<br>청구</a>
+							<a href="javascript:;" class="menu_item item_2">보험료<br>알아보기</a>
+							<a href="javascript:;" class="menu_item item_3">메뉴<br>조회</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap">
+				<p class="user_txt">보험금 청구</p>
+			</div>
+			<!-- //user_wrap -->
+
+			<!-- bot_wrap -->
+			<div class="bot_wrap">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>청구 구분</strong>을 선택해 주세요.
+						</p>
+						<div class="btn_list type_desc">
+							<a href="javascript:;" class="item"><!-- 활성화 : '.is_active' 추가 -->
+								<strong>신규 청구</strong>
+								<p class="desc">처음 청구하는 사고인 경우</p>
+							</a>
+							<a href="javascript:;" class="item">
+								<strong>추가 청구</strong>
+								<p class="desc">이전에 보험금 청구한 사고인 경우</p>
+							</a>
+							<a href="javascript:;" class="item">
+								<strong>보완서류제출</strong>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap">
+				<p class="user_txt">신규 청구</p>
+			</div>
+			<!-- //user_wrap -->
+
+		</div>
+		<!-- //chat_cont -->
+
+		<!-- chat_foot -->
+		<div class="chat_foot">
+
+			<!-- restart_wrap -->
+			<div class="restart_wrap">
+				<button type="button" class="btn_restart" onclick="fn.restart();">다시하기</button>
+			</div>
+			<!-- //restart_wrap -->
+
+			<!-- chat_input_box -->
+			<div class="chat_input_box">
+				<input type="text" id="chat_input" placeholder="궁금한점을 입력하세요." title="문의내용"><!-- 비활성화 : disabled 속성 추가 -->
+				<button type="button" class="btn_send"><span class="hide">문의 내용 전송</span></button>
+			</div>
+			<!-- //chat_input_box -->
+			
+			<!-- keyword_box -->
+			<div class="keyword_box"><!-- 활성화 : '.is_active' 추가 -->
+				<ul>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+				</ul>
+			</div>
+			<!-- //keyword_box -->
+
+		</div>
+		<!-- //chat_foot -->
+
+	</div>
+	<!-- //chat_wrap -->
+</body>
+</html>

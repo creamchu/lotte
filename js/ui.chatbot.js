@@ -48,7 +48,7 @@ var fn = (function() {
 			$(document).on("click", ".file_list .file_del", function(){
 				var $this = $(this);
 
-				$this.closest(".file_item").removeClass("is_active is_many");
+				$this.closest(".item").removeClass("is_active is_many");
 			});
 		},
 		
