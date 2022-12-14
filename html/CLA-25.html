@@ -39,6 +39,7 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">사고정보</strong>를 확인해 주세요.
 						</p>
+
 						<form class="form_wrap">
 							<fieldset>
 								<legend>사고정보 정보 입력</legend>
@@ -52,6 +53,7 @@
 										<p class="form_txt">서류의 진단명 또는 청구유형 정보이며,
 											필요 시 수정해 주세요.</p>
 									</li>
+
 									<li class="form_item">
 										<span class="form_tit">사고일자</span>
 										<div class="form_unit form_date">
@@ -60,6 +62,7 @@
 										<p class="form_txt">서류의 진단일 또는 청구 접수일 이며,
 											필요 시 수정해 주세요.</p>
 									</li>
+
 									<li class="form_item">
 										<span class="form_tit">사고장소</span>
 										<div class="form_unit form_address">
@@ -74,6 +77,7 @@
 								</ul>
 							</fieldset>
 						</form>
+
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button><!-- 비활성화 : disabled 속성 추가 -->
 						</div>
@@ -98,6 +102,7 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">보험금을 받을 입금계좌</strong>를 선택해주세요.
 						</p>
+
 						<form class="form_wrap">
 							<fieldset>
 								<legend>입금계좌 선택</legend>
@@ -106,10 +111,11 @@
 									<li class="form_item">
 										<div class="pay_list">
 											<!--
+												(추후 계좌케이스 더추가될 예정)
 												계좌 분기 : 클래스, 텍스트 변경
-												우정사업본부 : label.post
-												KB국민은행 : label.kb
-												하나은행 : label.hana
+												1. 우정사업본부 : label.post
+												2. KB국민은행 : label.kb
+												3. 하나은행 : label.hana
 											-->
 											<label class="post">
 												<input type="radio" name="radio">
@@ -126,6 +132,7 @@
 													</dl>
 												</div>
 											</label>
+
 											<label class="kb">
 												<input type="radio" name="radio">
 												<span><span class="hide">KB국민은행</span></span>
@@ -141,6 +148,7 @@
 													</dl>
 												</div>
 											</label>
+
 											<label class="hana">
 												<input type="radio" name="radio">
 												<span><span class="hide">하나은행</span></span>
@@ -161,6 +169,7 @@
 								</ul>
 							</fieldset>
 						</form>
+
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button>
 						</div>
@@ -185,6 +194,7 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">요청자 휴대폰 번호</strong>를 입력해 주세요.
 						</p>
+
 						<form class="form_wrap">
 							<fieldset>
 								<legend>요청자 휴대폰 번호 정보 입력</legend>
@@ -199,6 +209,7 @@
 								</ul>
 							</fieldset>
 						</form>
+
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button>
 						</div>
@@ -223,6 +234,7 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">의료급여 수급권자 여부</strong>를 선택해 주세요.
 						</p>
+
 						<form class="form_wrap">
 							<fieldset>
 								<legend>의료급여 수급권자 여부 선택</legend>
@@ -264,6 +276,7 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">보험금을 받을 입금계좌</strong>를 등록해 주세요.
 						</p>
+
 						<form class="form_wrap">
 							<fieldset>
 								<legend>입금계좌 선택</legend>
@@ -271,6 +284,7 @@
 								<button type="button" class="pay_btn">계좌번호 등록</button>
 							</fieldset>
 						</form>
+
 						<div class="btn_wrap">
 							<button type="button" class="btn big">확인</button><!-- 비활성화 : disabled 속성 추가 -->
 						</div>
@@ -289,6 +303,7 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">보험금을 받을 입금계좌</strong>를 등록해 주세요.
 						</p>
+
 						<form class="form_wrap">
 							<fieldset>
 								<legend>입금계좌 선택</legend>
@@ -308,11 +323,16 @@
 											</div>
 										</li>
 									</ul>
+
 									<div class="tab_cont">
+										<!-- 본인 탭내용 -->
 										<div class="tab_item is_active">
 											<h2 class="h2_tit">입금계좌</h2>
 											<button type="button" class="pay_btn">계좌번호 등록</button>
 										</div>
+										<!-- //본인 탭내용 -->
+
+										<!-- 피보험자 탭내용 -->
 										<div class="tab_item">
 											<ul>
 												<li class="form_item">
@@ -320,9 +340,9 @@
 													<div class="form_unit form_sel">
 														<input type="text" placeholder="선택" class="sel" readonly>
 														<button type="button" class="form_btn ico_sel"><span class="hide">선택</span></button>
-														<p class="form_validate">올바르게 입력해 주세요.</p>
 													</div>
 												</li>
+
 												<li class="form_item">
 													<span class="form_tit">계좌번호</span>
 													<div class="form_unit">
@@ -332,6 +352,7 @@
 												</li>
 											</ul>
 										</div>
+										<!-- //피보험자 탭내용 -->
 									</div>
 								</div>
 							</fieldset>
