@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>롯데손해보험 챗봇</title>
+	<!-- source// -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/jquery_library.css">
+	<link rel="stylesheet" href="../css/chatbot.css">
+	<script src="../js/jquery_2.1.1.min.js"></script>
+	<script src="../js/jquery_library.js"></script>
+	<script src="../js/ui.chatbot.js"></script>
+	<!-- //source -->
+</head>
+
+<body>
+	<!-- 스킵네비게이션 -->
+	<div id="skip">
+		<a href="#chat_input">채팅대화창 바로가기</a>
+	</div>
+	<!-- //스킵네비게이션 -->
+
+	<!-- chat_wrap -->
+	<div id="chat_wrap">
+
+		<!-- chat_cont -->
+		<div class="chat_cont">
+
+			<!-- bot_wrap -->
+			<div class="bot_wrap type_slider">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							추가 청구 가능한 접수번호는 아래와 같아요. 신규 청구 버튼을 눌러 새로운 청구를 진행할 수도 있어요
+						</p>
+
+						<!-- card_wrap -->
+						<div class="card_wrap">
+							<div class="swiper-container cardswiper">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide card_box">
+										<div class="card_tit">
+											<h2>{{사고내용}}</h2>
+											<strong>종결</strong><!-- 종결 일경우 : 종결 / 추가종결일 경우 : 추가종결 -->
+										</div>
+
+										<div class="card_info">
+											<dl>
+												<dt>접수번호</dt>
+												<dd>202012B1111 (신규 청구)</dd>
+											</dl>
+											<dl>
+												<dt>사고일자</dt>
+												<dd>2022.12.20</dd>
+											</dl>
+											<dl>
+												<dt>계약자</dt>
+												<dd>용탕치</dd>
+											</dl>
+											<dl>
+												<dt>피보험자</dt>
+												<dd>용탕치</dd>
+											</dl>
+											<dl class="card_txt_row">
+												<dt>상품명</dt>
+												<dd>무배당 let:안심가전보험(19대) (2204) 외 n개</dd>
+											</dl>
+
+											<div class="btn_wrap">
+												<button type="button" class="btn big full">추가 청구</button>
+											</div>
+										</div>
+									</li>
+
+									<li class="swiper-slide card_box">
+										<div class="card_tit">
+											<h2>{{사고내용}}</h2>
+											<strong>추가종결</strong>
+										</div>
+
+										<div class="card_info">
+											<dl>
+												<dt>접수번호</dt>
+												<dd>202012B1111 (신규 청구)</dd>
+											</dl>
+											<dl>
+												<dt>사고일자</dt>
+												<dd>2022.12.20</dd>
+											</dl>
+											<dl>
+												<dt>계약자</dt>
+												<dd>용탕치</dd>
+											</dl>
+											<dl>
+												<dt>피보험자</dt>
+												<dd>용탕치</dd>
+											</dl>
+											<dl class="card_txt_row">
+												<dt>상품명</dt>
+												<dd>상품명이 1줄일 경우</dd>
+											</dl>
+
+											<div class="btn_wrap">
+												<button type="button" class="btn big full">추가 청구</button>
+											</div>
+										</div>
+									</li>
+
+									<li class="swiper-slide card_box">
+										<div class="card_tit">
+											<h2>{{사고내용}}</h2>
+											<strong>종결</strong>
+										</div>
+
+										<div class="card_info">
+											<dl>
+												<dt>접수번호</dt>
+												<dd>202012B1111 (신규 청구)</dd>
+											</dl>
+											<dl>
+												<dt>사고일자</dt>
+												<dd>2022.12.20</dd>
+											</dl>
+											<dl>
+												<dt>계약자</dt>
+												<dd>용탕치</dd>
+											</dl>
+											<dl>
+												<dt>피보험자</dt>
+												<dd>용탕치</dd>
+											</dl>
+											<dl class="card_txt_row">
+												<dt>상품명</dt>
+												<dd>무배당 let:안심가전보험(19대) (2204) 외 n개</dd>
+											</dl>
+
+											<div class="btn_wrap">
+												<button type="button" class="btn big full">추가 청구</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+											
+							<div class="btn_wrap">
+								<button type="button" class="btn big white">신규 청구</button>
+							</div>
+						</div>
+						<!-- //card_wrap -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap -->
+
+		</div>
+		<!-- //chat_cont -->
+
+		<!-- chat_foot -->
+		<div class="chat_foot">
+
+			<!-- restart_wrap -->
+			<div class="restart_wrap">
+				<button type="button" class="btn_restart" onclick="fn.restart();">다시하기</button>
+			</div>
+			<!-- //restart_wrap -->
+
+			<!-- chat_input_box -->
+			<div class="chat_input_box">
+				<input type="text" id="chat_input" placeholder="궁금한점을 입력하세요." title="문의내용"><!-- 비활성화 : disabled 속성 추가 -->
+				<button type="button" class="btn_send"><span class="hide">문의 내용 전송</span></button>
+			</div>
+			<!-- //chat_input_box -->
+			
+			<!-- keyword_box -->
+			<div class="keyword_box"><!-- 활성화 : '.is_active' 추가 -->
+				<ul>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+				</ul>
+			</div>
+			<!-- //keyword_box -->
+
+		</div>
+		<!-- //chat_foot -->
+
+	</div>
+	<!-- //chat_wrap -->
+</body>
+</html>

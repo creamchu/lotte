@@ -30,7 +30,7 @@
 		<div class="chat_cont">
 
 			<!-- bot_wrap -->
-			<div id="bot_init" class="bot_wrap"><!-- 초기진입 봇 : bot_init -->
+			<div class="bot_wrap">
 				<div class="bot_img">
 					<span class="ico ico_bot"></span>
 				</div>
@@ -39,19 +39,109 @@
 						<p class="bot_txt">
 							<strong class="color_yellow">청구유형</strong>을 선택해 주세요.
 						</p>
+
+						<div class="accordion"><!-- 설명보기 : '.is_allview' 추가 -->
+							<div class="allview">
+								<button type="button" class="btn_allview">설명보기</button>
+							</div>
+
+							<div class="item"><!-- item 선택 : '.is_active' 추가 -->
+								<button type="button" class="btn_item">홀인원</button>
+								<div class="cont">
+									<ul class="accordion_list">
+										<li>골프 경기 중 홀인원을 한 경우 축하비용 보장</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="item">
+								<button type="button" class="btn_item">주택 (화재·도난·파손 등)</button>
+								<div class="cont">
+									<ul class="accordion_list">
+										<li>집에 화재가 발생되었을 때</li>
+										<li>우리 집 화재로 이웃집에 피해가 발생되었을 때</li>
+										<li>화재 벌금 납부 고지를 받았을 때</li>
+										<li>층간소음 피해를 입었을 때</li>
+									</ul>
+
+									<div class="accordion_form">
+										<label>
+											<input type="radio" name="radio">
+											<span>
+												<strong class="head">누수</strong>
+												<p class="data">급배수설비 누출로 인해 보험목적에 발생한 손해를 보장</p>
+											</span>
+										</label>
+
+										<label>
+											<input type="radio" name="radio">
+											<span>
+												<strong class="head">도난</strong>
+												<p class="data">내 집 수용 가재도구를 도난 당했을 경우 보장</p>
+											</span>
+										</label>
+
+										<label>
+											<input type="radio" name="radio">
+											<span>
+												<strong class="head">화재벌금</strong>
+												<p class="data">화재로 벌금형을 받은 경우 보장</p>
+											</span>
+										</label>
+
+										<label>
+											<input type="radio" name="radio">
+											<span>
+												<strong class="head">화재파손(유리포함)</strong>
+												<p class="data">화재·파손(유리 포함), 화재로 인한 임시거주비를 보장</p>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<button type="button" class="btn_item">진단비 (암·상해·질병 등)</button>
+								<div class="cont">
+									<ul class="accordion_list">
+										<li>의사로부터 아래의 진단을 받았을 때
+											<ul>
+												<li>① 골절, 화상</li>
+												<li>② 중증아토피, 소아비만</li>
+												<li>③ 성장장애, 외상성스트레스장애</li>
+												<li>④ 암</li>
+												<li>⑤ 기타 질병질환</li>
+											</ul>
+										</li>
+									</ul>
+
+									<div class="accordion_form">
+										<label>
+											<input type="checkbox" name="checkbox">
+											<span>
+												<strong class="head">암 진단</strong>
+												<p class="data">일반암·갑상선암·기타피부암 또는 유사암으로 진단 시 보장</p>
+											</span>
+										</label>
+
+										<label>
+											<input type="checkbox" name="checkbox">
+											<span>
+												<strong class="head">암 이외 진단(상해·질병)</strong>
+												<p class="data">화상·골절·폐암·뇌혈관 질환 등 상해·질병 관련 진단 시 보장</p>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<button type="button" class="btn_item">기타</button>
+							</div>
+						</div>
 						
-						<div class="btn_list type_desc">
-							<a href="javascript:;" class="item"><!-- 활성화 : '.is_active' 추가 -->
-								<strong>신규 청구</strong>
-								<p class="desc">처음 청구하는 사고인 경우</p>
-							</a>
-							<a href="javascript:;" class="item">
-								<strong>추가 청구</strong>
-								<p class="desc">이전에 보험금 청구한 사고인 경우</p>
-							</a>
-							<a href="javascript:;" class="item">
-								<strong>보완서류제출</strong>
-							</a>
+						<div class="btn_wrap">
+							<button type="button" class="btn big">확인</button><!-- 비활성화 : disabled 속성 추가 -->
 						</div>
 					</div>
 				</div>

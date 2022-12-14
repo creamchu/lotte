@@ -13,6 +13,9 @@ var fn = (function() {
 			//tab
 			fn.tab();
 
+			//accordion
+			fn.accordion();
+
 			//btnList
 			fn.btnList();
 
@@ -31,6 +34,25 @@ var fn = (function() {
 						index = $this.closest("label").index();
 
 				$tabcont.eq(index).addClass("is_active").siblings().removeClass("is_active");
+			});
+		},
+		
+		//accordion
+		accordion : function(){
+			$(document).on("click", ".accordion .btn_item", function(){
+				var $this = $(this);
+
+				$this.closest(".item").addClass("is_active").siblings().removeClass("is_active");
+			});
+
+			$(document).on("click", ".accordion .btn_allview", function(){
+				var $this = $(this).closest(".accordion");
+
+				if($this.hasClass("is_allview")){
+					$this.removeClass("is_allview");
+				}else{
+					$this.addClass("is_allview");
+				}
 			});
 		},
 		
@@ -85,12 +107,8 @@ var fn = (function() {
 			//button event에 따른 value 유무 체크
 			$(document).on("focus blur change", ".form_item .form_btn", function(){
 				var $this = $(this).siblings("input");
-				
-				if($this.val().trim() == ""){
-					$this.closest(".form_item").removeClass("is_complete");
-				}else {
-					$this.closest(".form_item").addClass("is_complete");
-				}
+
+				formValuCheck($this);
 			});
 		},
 
@@ -123,7 +141,7 @@ $(document).on('ready', function(){
 	if ( $cardswiperObj.find(".swiper-slide").length > 1 ){
 			var cardswiper = new Swiper(".cardswiper", {
 					slidesPerView: 1,
-					spaceBetween: 20,
+					spaceBetween: 12,
 					observer: true,
 					observeParents: true,
 			});
