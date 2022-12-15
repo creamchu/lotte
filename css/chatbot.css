@@ -27,7 +27,7 @@
 .h2_tit {line-height:20px;color:#fff;font-size:16px;font-weight:700;}
 
 /* btn */
-.btn {display:inline-block;position:relative;min-width:80px;height:40px;line-height:40px;padding:0 10px;background-color:#fee90f;color:#000;font-size:14px;font-weight:700;text-align:center;vertical-align:middle;border-radius:16px;}
+.btn {display:inline-block;position:relative;min-width:80px;height:40px;line-height:40px;padding:0 12px;background-color:#fee90f;color:#000;font-size:14px;font-weight:700;text-align:center;vertical-align:middle;border-radius:16px;}
 .btn:disabled {background:#fff !important;color:rgba(0, 0, 0, .2);pointer-events:none;}
 .btn.full {width:100%;}
 .btn.round {border-radius:20px;}
@@ -70,8 +70,8 @@
 /* accordion */
 .accordion {margin-top:-12px;}
 .accordion .allview {margin-bottom:16px;text-align:right;}
-.accordion .allview .btn_allview {display:inline-block;padding:5px 12px 3px 8px;background:#000;color:#fff;font-size:12px;border-radius:16px;}
-.accordion .allview .btn_allview:before {content:"";display:inline-block;width:20px;height:20px;margin-right:4px;background:url('../img/ico_allview.png') no-repeat 0 0/100%;vertical-align:middle;}
+.accordion .allview .btn_allview {display:inline-block;padding:6px 12px 4px 8px;background:#000;color:#fff;font-size:12px;border-radius:16px;}
+.accordion .allview .btn_allview:before {content:"";display:inline-block;width:20px;height:20px;margin-top:-2px;margin-right:4px;background:url('../img/ico_allview.png') no-repeat 0 0/100%;vertical-align:middle;}
 
 .accordion .item {border-radius:24px;overflow:hidden;}
 .accordion .item + .item {margin-top:12px;}
@@ -190,7 +190,7 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 .form_wrap {margin:0 -8px;padding:16px;background:rgba(125, 79, 207, .68);border-radius:24px;}
 .form_wrap .form_item {margin-top:16px;}
 .form_wrap .form_item:first-child {margin-top:0;}
-.form_wrap .form_item.is_complete .form_tit {color:rgba(255, 255, 255, .32);transition:all .3s;}
+.form_wrap .form_item.is_complete .form_tit {color:rgba(255, 255, 255, .32);}
 .form_wrap .form_tit {display:block;margin-bottom:12px;color:#fff;font-size:14px;font-weight:300;transition:all .4s;}
 .form_wrap .form_txt {margin-top:4px;padding-left:16px;line-height:16px;color:rgba(255, 255, 255, .5);font-size:12px;}
 .form_wrap .form_txt2 {position:absolute;top:-27px;right:0;color:rgba(255, 255, 255, .5);font-size:14px;font-weight:300;}
