@@ -30,7 +30,7 @@
 		<div class="chat_cont">
 
 			<!-- bot_wrap type_thin -->
-			<div class="bot_wrap type_thin">
+			<div class="bot_wrap type_thin"><!-- 사고정보 내용을 불러온 경우 -->
 				<div class="bot_img">
 					<span class="ico ico_bot"></span>
 				</div>
@@ -38,6 +38,63 @@
 					<div class="bot_box_inner">
 						<p class="bot_txt">
 							<strong>사고정보</strong>를 확인해 주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>사고정보 정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">사고내용</span>
+										<div class="form_unit">
+											<textarea maxlength="200" placeholder="내용 입력(200자 이내)">사고내용 청구</textarea>
+											<span class="form_txt2">( 1 / 200자 )</span>
+										</div>
+										<p class="form_txt">서류의 진단명 또는 청구유형 정보이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+
+									<li class="form_item">
+										<span class="form_tit">사고일자</span>
+										<div class="form_unit form_date">
+											<input type="text" placeholder="일자 선택" value="2022.10.07" class="date" readonly>
+										</div>
+										<p class="form_txt">서류의 진단일 또는 청구 접수일 이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+
+									<li class="form_item">
+										<span class="form_tit">사고장소</span>
+										<div class="form_unit form_address">
+											<input type="text" placeholder="주소 입력" value="서울시 중구 소월로 3" readonly>
+											<button type="button" class="form_btn ico_search"><span class="hide">주소검색</span></button>
+										</div>
+										<div class="form_unit form_address">
+											<input type="text" value="롯데손해보험 빌딩 6층" readonly>
+											<button type="button" class="form_btn"><span class="hide">주소검색</span></button>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+
+						<div class="btn_wrap">
+							<button type="button" class="btn middle">확인</button><!-- 비활성화 : disabled 속성 추가 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin"><!-- 사고정보 내용을 입력해야 하는 경우 -->
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>사고정보</strong>를 입력해 주세요.
 						</p>
 
 						<form class="form_wrap">
@@ -192,7 +249,7 @@
 				<div class="bot_box">
 					<div class="bot_box_inner">
 						<p class="bot_txt">
-							<strong>요청자 휴대폰 번호</strong>를 입력해 주세요.
+							<strong>요청자 휴대폰 번호</strong>를 확인해 주세요.
 						</p>
 
 						<form class="form_wrap">

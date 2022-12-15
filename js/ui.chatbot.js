@@ -87,7 +87,7 @@ var fn = (function() {
 			}
 
 			//value 유무 체크 : 초기 default
-			$(".form_item input").each(function(){
+			$(".form_item input, .form_item textarea").each(function(){
 				var $this = $(this);
 
 				if($this.is(':radio') || $this.is(':checkbox')) {
