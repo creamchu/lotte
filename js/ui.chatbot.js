@@ -22,8 +22,8 @@ var fn = (function() {
 			//fileDel
 			fn.fileDel();
 
-			//fromFocus
-			fn.fromFocus();
+			//formFocus
+			fn.formFocus();
 		},
 
 		//tab
@@ -74,8 +74,8 @@ var fn = (function() {
 			});
 		},
 		
-		//fromFocus
-		fromFocus : function(){
+		//formFocus
+		formFocus : function(){
 
 			//value 유무에 따른 활성화/비활성화
 			function formValuCheck($this) {
