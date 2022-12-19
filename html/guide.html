@@ -19,10 +19,10 @@
 
 		<!-- 가이드 확인용// -->
 		<style>
-			#guide{position:relative;max-width:1920px;height:100%;padding:20px 30px 50px;color:#000;overflow-y:scroll;}
-			#guide h1{margin-top:50px;margin-bottom:100px;text-align:center;}
-			#guide .guide_tit{margin-top:70px;padding-left:10px;border-left:5px solid #194174;}
-			#guide hr{margin-top:20px;margin-left:-30px;margin-right:-30px;border-top:1px solid #194174;}
+			#guide{position:relative;max-width:1920px;height:100%;padding:20px 30px 50px;background:#522E92;color:#000;overflow-y:scroll;}
+			#guide h1{margin-top:50px;margin-bottom:100px;color:#fff;text-align:center;}
+			#guide .guide_tit{margin:50px 0 20px;padding-left:10px;color:#fff;border-left:5px solid #a352ff;}
+			#guide hr{margin-top:20px;margin-left:-30px;margin-right:-30px;border-top:1px solid #a352ff;}
 		</style>
 		<!-- //가이드 확인용 -->
 	</head>
@@ -37,63 +37,120 @@
 		<!-- 버튼// -->
 		<button type="button" class="btn">기본 버튼</button>
 		<button type="button" class="btn" disabled>기본 버튼 disabled</button>
-		<button type="button" class="btn">목적물 소재지 변경</button>
 		<button type="button" class="btn small white">서류제출</button>
-		<button type="button" class="btn" disabled>비활성화</button>
-		<button type="button" class="btn arrow">화살표</button>
 
-		<div class="btn_wrap">
-			<button type="button" class="btn middle">확인</button>
-		</div>
-		<div class="btn_wrap">
-			<button type="button" class="btn big white">신규청구</button>
-		</div>
-		<div class="btn_wrap">
-			<button type="button" class="btn big full">추가청구</button>
-		</div>
+		<ul class="list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item">
+				<a href="javascript:;" class="btn">확인</a>
+			</li>
+		</ul>	
 
-		<div class="btn_wrap col2">
-			<button type="button" class="btn middle round purple">보라색</button>
-			<button type="button" class="btn middle round black">검은색</button>
-		</div>
+		<ul class="list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item">
+				<a href="javascript:;" class="btn btn_add">추가 청구</a>
+			</li>
+		</ul>
 
-		<div class="btn_wrap col2">
-			<button type="button" class="btn">해당없음</button>
-			<button type="button" class="btn black">해당 함</button>
-		</div>
+		<ul class="list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item">
+				<a href="javascript:;" class="btn btn_new">신규 청구</a>
+			</li>
+		</ul>
 
-		<div class="btn_wrap col2">
-			<button type="button" class="btn round">나의 보험계약 2줄2줄 2줄 2줄</button>
-			<button type="button" class="btn round">철회/취소/해지</button>
-			<button type="button" class="btn round">보험계약 변경</button>
-			<button type="button" class="btn round">보험계약납입관리</button>
-		</div>
+		<ul class="list_btn_tit"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item"><!-- 활성화 : '.is_active' 추가 -->
+				<a href="javascript:;" class="btn">김롯데 (1970.0101)</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">김*째 (2011.02.02)</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">김*째 (2013.01.01)</a>
+			</li>
+		</ul>
 
-		<div class="btn_wrap col3">
-			<button type="button" class="btn round">본인 2줄2줄 2줄</button>
-			<button type="button" class="btn round">자녀</button>
-			<button type="button" class="btn round">타인</button>
-		</div>
+		<ul class="list_btn_desc"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item"><!-- 활성화 : '.is_active' 추가 -->
+				<a href="javascript:;" class="btn">
+					<strong>신규 청구</strong>
+					<p class="desc">처음 청구하는 사고인 경우</p>
+				</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">
+					<strong>추가 청구</strong>
+					<p class="desc">이전에 보험금 청구한 사고인 경우</p>
+				</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">
+					<strong>보완서류제출</strong>
+				</a>
+			</li>
+		</ul>
+						
+		<ul class="list_btn_arrow"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item">
+				<a href="javascript:;" class="btn">보험기간 변경</a>
+			</li>
+		</ul>
 
-		<div class="btn_list type_desc">
-			<a href="javascript:;" class="item is_active"><!-- 활성화 : '.is_active' 추가 -->
-				<strong>신규 청구</strong>
-				<p class="desc">처음 청구하는 사고인 경우</p>
-			</a>
-			<a href="javascript:;" class="item">
-				<strong>추가 청구</strong>
-				<p class="desc">이전에 보험금 청구한 사고인 경우</p>
-			</a>
-			<a href="javascript:;" class="item">
-				<strong>보완서류제출</strong>
-			</a>
-		</div>
+		<ul class="list_btn_init">
+			<li class="item">
+				<a href="javascript:;" class="btn btn_continue">계속진행</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn btn_init" onclick="fn.init();">처음으로</a>
+			</li>
+		</ul>
+						
+		<ul class="list_btn_init">
+			<li class="item">
+				<a href="javascript:;" class="btn btn_no">아니요</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn btn_keepgoing">이어하기</a>
+			</li>
+		</ul>
 
-		<div class="btn_list">
-			<a href="javascript:;" class="item is_active">김롯데 (1970.0101)</a><!-- 활성화 : '.is_active' 추가 -->
-			<a href="javascript:;" class="item">김*째 (2011.02.02)</a>
-			<a href="javascript:;" class="item">김*째 (2013.01.01)</a>
-		</div>
+		<ul class="list_btn_col2"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item">
+				<a href="javascript:;" class="btn">보험계약관리</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">보험가입</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">증명서 발급</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">고객센터</a>
+			</li>
+		</ul>
+
+		<ul class="list_btn_col3"><!-- 비활성화 : '.is_disabled' 추가 -->
+			<li class="item">
+				<a href="javascript:;" class="btn">본인</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">자녀</a>
+			</li>
+			<li class="item">
+				<a href="javascript:;" class="btn">타인</a>
+			</li>
+		</ul>
+
+		<ul class="list_btn_menu">
+			<li class="item item_1">
+				<a href="javascript:;">보험금<br>청구</a>
+			</li>
+			<li class="item item_2">
+				<a href="javascript:;">보험료<br>알아보기</a>
+			</li>
+			<li class="item item_3">
+				<a href="javascript:;">메뉴<br>조회</a>
+			</li>
+		</ul>
 		<!-- //버튼 -->
 
 		<h2 class="guide_tit">input</h2>

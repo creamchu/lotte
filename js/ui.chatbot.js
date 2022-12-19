@@ -16,8 +16,8 @@ var fn = (function() {
 			//accordion
 			fn.accordion();
 
-			//btnList
-			fn.btnList();
+			//listBtn
+			fn.listBtn();
 
 			//fileDel
 			fn.fileDel();
@@ -56,12 +56,12 @@ var fn = (function() {
 			});
 		},
 		
-		//btnList
-		btnList : function(){
-			$(document).on("click", ".btn_list .item", function(){
+		//listBtn
+		listBtn : function(){
+			$(document).on("click", ".list_btn_tit .btn, .list_btn_desc .btn", function(){
 				var $this = $(this);
 
-				$this.addClass("is_active").siblings().removeClass("is_active");
+				$this.closest(".item").addClass("is_active").siblings().removeClass("is_active");
 			});
 		},
 		
