@@ -42,7 +42,7 @@ var fn = (function() {
 			$(document).on("click", ".accordion .btn_item", function(){
 				var $this = $(this);
 
-				$this.closest(".item").addClass("is_active").siblings().removeClass("is_active");
+				$this.closest(".accordion_item").addClass("is_active").siblings().removeClass("is_active");
 			});
 
 			$(document).on("click", ".accordion .btn_allview", function(){
@@ -70,7 +70,7 @@ var fn = (function() {
 			$(document).on("click", ".file_list .file_del", function(){
 				var $this = $(this);
 
-				$this.closest(".item").removeClass("is_active is_many");
+				$this.closest(".file_item").removeClass("is_active is_many");
 			});
 		},
 		
