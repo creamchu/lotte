@@ -44,12 +44,16 @@
 .btn.arrow:after {content:"";position:absolute;top:50%;right:12px;width:28px;height:28px;margin-top:-14px;background:#000 url('../img/ico_arrow.png') no-repeat 50% 50%/20px;border-radius:12px;}
 */
 
-/* list_btn is_disabled */
+/* list_btn.is_default */
+.list_btn.is_default .btn {background-color:#fff;color:rgba(0, 0, 0, .2);font-weight:700;}
+
+/* list_btn.is_disabled */
 .list_btn.is_disabled .btn {background:repeating-linear-gradient( -60deg, #643ea8, #643ea8 6px, #5e38a0 6px, #5e38a0 11px);color:rgba(255, 255, 255, .5) !important;pointer-events:none !important;}
-.list_btn.is_disabled input[type="radio"] + span {pointer-events:none !important;}
+.list_btn.is_disabled input[type="radio"] + span {background:repeating-linear-gradient( -60deg, #643ea8, #643ea8 6px, #5e38a0 6px, #5e38a0 11px);color:rgba(255, 255, 255, .5) !important;}
+.list_btn.is_disabled input[type="radio"]:checked + span {background:repeating-linear-gradient( -60deg, #fee90f, #fee90f 6px, #ecd80d 6px, #ecd80d 11px);color:rgba(0, 0, 0, .5) !important;}
 .list_btn.is_disabled .item.is_active .btn {background:repeating-linear-gradient( -60deg, #fee90f, #fee90f 6px, #ecd80d 6px, #ecd80d 11px);color:rgba(0, 0, 0, .5) !important;}
 
-/* list_btn is_active */
+/* list_btn item.is_active */
 .list_btn .item.is_active .btn {background-color:#fee90f;color:#000;font-weight:700;}
 
 /* list_btn_com */
@@ -62,8 +66,6 @@
 .list_btn_tit {margin-top:20px;}
 .list_btn_tit .item + .item {margin-top:12px;}
 .list_btn_tit .item .btn {width:100%;line-height:18px;padding:18px 24px;font-size:16px;font-weight:400;}
-.list_btn_tit.is_disabled .item .btn {}
-.list_btn_tit.is_disabled .item.is_active .btn {}
 
 /* list_btn_desc */
 .list_btn_desc {margin-top:20px;}
@@ -73,9 +75,8 @@
 .list_btn_desc .item .btn .desc {line-height:20px;margin-top:4px;color:rgba(255, 255, 255, .5);font-weight:400;}
 .list_btn_desc .item.is_active .btn strong {color:#000;}
 .list_btn_desc .item.is_active .btn .desc {color:rgba(0, 0, 0, .5);font-weight:700;}
-.list_btn_desc.is_disabled .item .btn {}
+.list_btn_desc.is_disabled .item.is_active .btn strong {color:rgba(0, 0, 0, .5);}
 .list_btn_desc.is_disabled .item .btn .desc {opacity:0.5;}
-.list_btn_desc.is_disabled .item.is_active .btn {}
 
 /* list_btn_arrow */
 .list_btn_arrow {margin-top:20px;}
@@ -206,12 +207,12 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 #skip a:focus, #skip a:active {top:0;}
 
 /* layout */
-#chat_wrap {position:relative;width:100%;height:100%;background:#522e92;}
+#chat_wrap {position:relative;width:100%;height:calc(100% - 44px);background:#522e92;}
 .chat_cont {position:absolute;top:0;bottom:92px;width:100%;padding:0 24px;overflow-y:scroll;}
 .chat_foot {position:absolute;bottom:0;left:0;right:0;height:92px;z-index:10;}
 
 /* restart_wrap */
-.restart_wrap {position:fixed;top:8px;left:50%;margin-left:-55px;z-index:10;}
+.restart_wrap {position:fixed;top:52px;left:50%;margin-left:-55px;z-index:10;}
 .restart_wrap .btn_restart {width:110px;height:32px;padding-left:44px;background:rgba(0, 0, 0, .95) url('../img/ico_restart.png') no-repeat 16px 6px/20px;color:#fee90f;font-size:14px;font-weight:700;text-align:left;border-radius:16px;}
 
 /* chat_input_box */
