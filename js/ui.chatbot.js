@@ -58,7 +58,7 @@ var fn = (function() {
 		
 		//listBtn
 		listBtn : function(){
-			$(document).on("click", ".list_btn_tit .btn, .list_btn_desc .btn", function(){
+			$(document).on("click", ".list_btn_col2 .btn, .list_btn_col3 .btn, .list_btn_tit .btn, .list_btn_desc .btn", function(){
 				var $this = $(this);
 
 				$this.closest(".item").addClass("is_active").siblings().removeClass("is_active");

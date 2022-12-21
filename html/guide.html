@@ -21,6 +21,7 @@
 		<style>
 			#guide{position:relative;max-width:1920px;height:100%;padding:20px 30px 50px;background:#522E92;color:#000;overflow-y:scroll;}
 			#guide h1{margin-top:50px;margin-bottom:100px;color:#fff;text-align:center;}
+			#guide .guide_inner {}
 			#guide .guide_tit{margin:50px 0 20px;padding-left:10px;color:#fff;border-left:5px solid #a352ff;}
 			#guide hr{margin-top:20px;margin-left:-30px;margin-right:-30px;border-top:1px solid #a352ff;}
 		</style>
@@ -31,260 +32,326 @@
 
 <body>
 	<div id="guide">
-		<h1>GUIDE</h1>
+		<div class="guide_inner">
+			<h1>GUIDE</h1>
 
-		<h2 class="guide_tit">버튼</h2>
-		<!-- 버튼// -->
-		<button type="button" class="btn">기본 버튼</button>
-		<button type="button" class="btn" disabled>기본 버튼 disabled</button>
-		<button type="button" class="btn small white">서류제출</button>
+			<h2 class="guide_tit">버튼</h2>
+			<!-- 버튼// -->
+			<button type="button" class="btn">기본 버튼</button>
+			<button type="button" class="btn" disabled>기본 버튼 disabled</button>
 
-		<ul class="list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item">
-				<a href="javascript:;" class="btn">확인</a>
-			</li>
-		</ul>	
+			<ul class="list_btn list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn">확인</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item">
-				<a href="javascript:;" class="btn btn_add">추가 청구</a>
-			</li>
-		</ul>
+			<ul class="list_btn list_btn_com is_disabled"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn">확인</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item">
-				<a href="javascript:;" class="btn btn_new">신규 청구</a>
-			</li>
-		</ul>
+			<ul class="list_btn list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn btn_add">추가 청구</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_tit"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item"><!-- 활성화 : '.is_active' 추가 -->
-				<a href="javascript:;" class="btn">김롯데 (1970.0101)</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">김*째 (2011.02.02)</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">김*째 (2013.01.01)</a>
-			</li>
-		</ul>
+			<ul class="list_btn list_btn_com"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn btn_new">신규 청구</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_desc"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item"><!-- 활성화 : '.is_active' 추가 -->
-				<a href="javascript:;" class="btn">
-					<strong>신규 청구</strong>
-					<p class="desc">처음 청구하는 사고인 경우</p>
-				</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">
-					<strong>추가 청구</strong>
-					<p class="desc">이전에 보험금 청구한 사고인 경우</p>
-				</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">
-					<strong>보완서류제출</strong>
-				</a>
-			</li>
-		</ul>
-						
-		<ul class="list_btn_arrow"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item">
-				<a href="javascript:;" class="btn">보험기간 변경</a>
-			</li>
-		</ul>
+			<ul class="list_btn list_btn_tit"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item"><!-- 활성화 : '.is_active' 추가 -->
+					<a href="javascript:;" class="btn">김롯데 (1970.0101)</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">김*째 (2011.02.02)</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">김*째 (2013.01.01)</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_init">
-			<li class="item">
-				<a href="javascript:;" class="btn btn_continue">계속진행</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn btn_init" onclick="fn.init();">처음으로</a>
-			</li>
-		</ul>
-						
-		<ul class="list_btn_init">
-			<li class="item">
-				<a href="javascript:;" class="btn btn_no">아니요</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn btn_keepgoing">이어하기</a>
-			</li>
-		</ul>
+			<ul class="list_btn list_btn_tit is_disabled"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item is_active"><!-- 활성화 : '.is_active' 추가 -->
+					<a href="javascript:;" class="btn">김롯데 (1970.0101)</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">김*째 (2011.02.02)</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">김*째 (2013.01.01)</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_col2"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item">
-				<a href="javascript:;" class="btn">보험계약관리</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">보험가입</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">증명서 발급</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">고객센터</a>
-			</li>
-		</ul>
+			<ul class="list_btn list_btn_desc"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item"><!-- 활성화 : '.is_active' 추가 -->
+					<a href="javascript:;" class="btn">
+						<strong>신규 청구</strong>
+						<p class="desc">처음 청구하는 사고인 경우</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">
+						<strong>추가 청구</strong>
+						<p class="desc">이전에 보험금 청구한 사고인 경우</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">
+						<strong>보완서류제출</strong>
+					</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_col3"><!-- 비활성화 : '.is_disabled' 추가 -->
-			<li class="item">
-				<a href="javascript:;" class="btn">본인</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">자녀</a>
-			</li>
-			<li class="item">
-				<a href="javascript:;" class="btn">타인</a>
-			</li>
-		</ul>
+			<ul class="list_btn list_btn_desc is_disabled"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item is_active"><!-- 활성화 : '.is_active' 추가 -->
+					<a href="javascript:;" class="btn">
+						<strong>신규 청구</strong>
+						<p class="desc">처음 청구하는 사고인 경우</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">
+						<strong>추가 청구</strong>
+						<p class="desc">이전에 보험금 청구한 사고인 경우</p>
+					</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">
+						<strong>보완서류제출</strong>
+					</a>
+				</li>
+			</ul>
+							
+			<ul class="list_btn list_btn_arrow"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn">보험기간 변경</a>
+				</li>
+			</ul>
 
-		<ul class="list_btn_menu">
-			<li class="item item_1">
-				<a href="javascript:;">보험금<br>청구</a>
-			</li>
-			<li class="item item_2">
-				<a href="javascript:;">보험료<br>알아보기</a>
-			</li>
-			<li class="item item_3">
-				<a href="javascript:;">메뉴<br>조회</a>
-			</li>
-		</ul>
-		<!-- //버튼 -->
+			<ul class="list_btn list_btn_init"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn btn_continue">계속진행</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn btn_init" onclick="fn.init();">처음으로</a>
+				</li>
+			</ul>
+							
+			<ul class="list_btn list_btn_init"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn btn_no">아니요</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn btn_keepgoing">이어하기</a>
+				</li>
+			</ul>
 
-		<h2 class="guide_tit">input</h2>
-		<form class="form_wrap">
-			<fieldset>
-				<legend>필요서류 첨부</legend>
-				<ul>
-					<li class="form_item">
-						<input type="text" placeholder="가나다라마바사">
-						<input type="password">
-						<input type="text" value="disabled" disabled>
-						<div class="form_unit form_date">
-							<input type="text" placeholder="일자 선택" class="date" readonly>
-						</div>
-						<div class="form_unit form_sel">
-							<input type="text" placeholder="선택" class="sel" readonly>
-							<button type="button" class="form_btn ico_sel"><span class="hide">선택</span></button>
-							<p class="form_validate">올바르게 입력해 주세요.</p>
-						</div>
-					</li>
-					<li class="form_item">
-						<span class="form_tit">성별</span>
-						<div class="form_unit form_rdo form_rdo_col">
-							<label>
-								<input type="radio" name="radio2">
-								<span>남자</span>
-							</label>
-							<label>
-								<input type="radio" name="radio2">
-								<span>여자</span>
-							</label>
-						</div>
-					</li>
-					<li class="form_item">
-						<span class="form_tit">연령대</span>
-						<div class="form_unit form_rdo">
-							<label>
-								<input type="radio" name="radio3">
-								<span>19세 이하</span>
-							</label>
-							<label>
-								<input type="radio" name="radio3">
-								<span>20 ~ 29세</span>
-							</label>
-							<label>
-								<input type="radio" name="radio3">
-								<span>30 ~ 39세</span>
-							</label>
-							<label>
-								<input type="radio" name="radio3">
-								<span>40 ~ 49세</span>
-							</label>
-							<label>
-								<input type="radio" name="radio3">
-								<span>50 ~ 59세</span>
-							</label>
-							<label>
-								<input type="radio" name="radio3">
-								<span>60세 이상</span>
-							</label>
-						</div>
-					</li>
-				</ul>
-			</fieldset>
-		</form>
+			<ul class="list_btn list_btn_col2"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn">보험계약관리</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">보험가입</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">증명서 발급</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">고객센터</a>
+				</li>
+			</ul>
 
-		<h2 class="guide_tit">checkbox</h2>
-		<label>
-			<input type="checkbox">
-			<span>체크박스</span>
-		</label>
-		<label>
-			<input type="checkbox" checked>
-			<span>체크박스 checked</span>
-		</label>
-		<label>
-			<input type="checkbox" disabled>
-			<span>체크박스 disabled</span>
-		</label>
+			<ul class="list_btn list_btn_col2 is_disabled"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item is_active">
+					<a href="javascript:;" class="btn">보험계약관리</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">보험가입</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">증명서 발급</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">고객센터</a>
+				</li>
+			</ul>
 
-		<h2 class="guide_tit">radio</h2>
-		<label>
-			<input type="radio">
-			<span>radio</span>
-		</label>
-		<label>
-			<input type="radio" checked>
-			<span>radio checked</span>
-		</label>
-		<label>
-			<input type="radio" disabled>
-			<span>radio disabled</span>
-		</label>
+			<ul class="list_btn list_btn_col3"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn">본인</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">자녀</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">타인</a>
+				</li>
+			</ul>
 
-		<h2 class="guide_tit">radio_box</h2>
-		<div class="radio_box">
+			<ul class="list_btn list_btn_col3 is_disabled"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item is_active">
+					<a href="javascript:;" class="btn">본인</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">자녀</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn">타인</a>
+				</li>
+			</ul>
+
+			<ul class="list_btn_menu">
+				<li class="item item_1">
+					<a href="javascript:;">보험금<br>청구</a>
+				</li>
+				<li class="item item_2">
+					<a href="javascript:;">보험료<br>알아보기</a>
+				</li>
+				<li class="item item_3">
+					<a href="javascript:;">메뉴<br>조회</a>
+				</li>
+			</ul>
+			<!-- //버튼 -->
+
+			<h2 class="guide_tit">input</h2>
+			<form class="form_wrap">
+				<fieldset>
+					<legend>필요서류 첨부</legend>
+					<ul>
+						<li class="form_item">
+							<input type="text" placeholder="가나다라마바사">
+							<input type="password">
+							<input type="text" value="disabled" disabled>
+							<div class="form_unit form_date">
+								<input type="text" placeholder="일자 선택" class="date" readonly>
+							</div>
+							<div class="form_unit form_sel">
+								<input type="text" placeholder="선택" class="sel" readonly>
+								<button type="button" class="form_btn ico_sel"><span class="hide">선택</span></button>
+								<p class="form_validate">올바르게 입력해 주세요.</p>
+							</div>
+						</li>
+						<li class="form_item">
+							<span class="form_tit">성별</span>
+							<div class="form_unit form_rdo form_rdo_col">
+								<label>
+									<input type="radio" name="radio2">
+									<span>남자</span>
+								</label>
+								<label>
+									<input type="radio" name="radio2">
+									<span>여자</span>
+								</label>
+							</div>
+						</li>
+						<li class="form_item">
+							<span class="form_tit">연령대</span>
+							<div class="form_unit form_rdo">
+								<label>
+									<input type="radio" name="radio3">
+									<span>19세 이하</span>
+								</label>
+								<label>
+									<input type="radio" name="radio3">
+									<span>20 ~ 29세</span>
+								</label>
+								<label>
+									<input type="radio" name="radio3">
+									<span>30 ~ 39세</span>
+								</label>
+								<label>
+									<input type="radio" name="radio3">
+									<span>40 ~ 49세</span>
+								</label>
+								<label>
+									<input type="radio" name="radio3">
+									<span>50 ~ 59세</span>
+								</label>
+								<label>
+									<input type="radio" name="radio3">
+									<span>60세 이상</span>
+								</label>
+							</div>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+
+			<h2 class="guide_tit">checkbox</h2>
 			<label>
-				<input type="radio" name="radiobox">
+				<input type="checkbox">
+				<span>체크박스</span>
+			</label>
+			<label>
+				<input type="checkbox" checked>
+				<span>체크박스 checked</span>
+			</label>
+			<label>
+				<input type="checkbox" disabled>
+				<span>체크박스 disabled</span>
+			</label>
+
+			<h2 class="guide_tit">radio</h2>
+			<label>
+				<input type="radio">
 				<span>radio</span>
 			</label>
 			<label>
-				<input type="radio" name="radiobox">
-				<span>radio</span>
+				<input type="radio" checked>
+				<span>radio checked</span>
 			</label>
 			<label>
-				<input type="radio" name="radiobox">
-				<span>radio</span>
+				<input type="radio" disabled>
+				<span>radio disabled</span>
 			</label>
-			<label>
-				<input type="radio" name="radiobox">
-				<span>radio</span>
-			</label>
+
+			<h2 class="guide_tit">radio_box</h2>
+			<div class="radio_box">
+				<label>
+					<input type="radio" name="radiobox">
+					<span>radio</span>
+				</label>
+				<label>
+					<input type="radio" name="radiobox">
+					<span>radio</span>
+				</label>
+				<label>
+					<input type="radio" name="radiobox">
+					<span>radio</span>
+				</label>
+				<label>
+					<input type="radio" name="radiobox">
+					<span>radio</span>
+				</label>
+			</div>
+
+			<h2 class="guide_tit">check_box</h2>
+			<div class="check_box">
+				<label>
+					<input type="checkbox">
+					<span>checkbox</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>checkbox</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>checkbox</span>
+				</label>
+				<label>
+					<input type="checkbox">
+					<span>checkbox</span>
+				</label>
+			</div>
+
 		</div>
-
-		<h2 class="guide_tit">check_box</h2>
-		<div class="check_box">
-			<label>
-				<input type="checkbox">
-				<span>checkbox</span>
-			</label>
-			<label>
-				<input type="checkbox">
-				<span>checkbox</span>
-			</label>
-			<label>
-				<input type="checkbox">
-				<span>checkbox</span>
-			</label>
-			<label>
-				<input type="checkbox">
-				<span>checkbox</span>
-			</label>
-		</div>
-
 	</div>
 </body>
 </html>
