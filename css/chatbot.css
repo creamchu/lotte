@@ -45,9 +45,9 @@
 */
 
 /* list_btn is_disabled */
-.list_btn.is_disabled .btn {background-image:url('../img/btn_disabled.png');background-position:0 0;background-size:100% 100%;color:rgba(255, 255, 255, .5) !important;pointer-events:none !important;}
-.list_btn.is_disabled input[type="radio"] + span {background-image:url('../img/btn_disabled.png');background-position:0 0;background-size:100% 100%;pointer-events:none !important;}
-.list_btn.is_disabled .item.is_active .btn {background-image:url('../img/btn_disabled_active.png');color:rgba(0, 0, 0, .5) !important;}
+.list_btn.is_disabled .btn {background:repeating-linear-gradient( -60deg, #643ea8, #643ea8 6px, #5e38a0 6px, #5e38a0 11px);color:rgba(255, 255, 255, .5) !important;pointer-events:none !important;}
+.list_btn.is_disabled input[type="radio"] + span {pointer-events:none !important;}
+.list_btn.is_disabled .item.is_active .btn {background:repeating-linear-gradient( -60deg, #fee90f, #fee90f 6px, #ecd80d 6px, #ecd80d 11px);color:rgba(0, 0, 0, .5) !important;}
 
 /* list_btn is_active */
 .list_btn .item.is_active .btn {background-color:#fee90f;color:#000;font-weight:700;}
@@ -62,8 +62,8 @@
 .list_btn_tit {margin-top:20px;}
 .list_btn_tit .item + .item {margin-top:12px;}
 .list_btn_tit .item .btn {width:100%;line-height:18px;padding:18px 24px;font-size:16px;font-weight:400;}
-.list_btn_tit.is_disabled .item .btn {background-image:url('../img/btn_desc_disabled.png');}
-.list_btn_tit.is_disabled .item.is_active .btn {background-image:url('../img/btn_desc_disabled_active.png');}
+.list_btn_tit.is_disabled .item .btn {}
+.list_btn_tit.is_disabled .item.is_active .btn {}
 
 /* list_btn_desc */
 .list_btn_desc {margin-top:20px;}
@@ -73,9 +73,9 @@
 .list_btn_desc .item .btn .desc {line-height:20px;margin-top:4px;color:rgba(255, 255, 255, .5);font-weight:400;}
 .list_btn_desc .item.is_active .btn strong {color:#000;}
 .list_btn_desc .item.is_active .btn .desc {color:rgba(0, 0, 0, .5);font-weight:700;}
-.list_btn_desc.is_disabled .item .btn {background-image:url('../img/btn_desc_disabled.png');}
+.list_btn_desc.is_disabled .item .btn {}
 .list_btn_desc.is_disabled .item .btn .desc {opacity:0.5;}
-.list_btn_desc.is_disabled .item.is_active .btn {background-image:url('../img/btn_desc_disabled_active.png');}
+.list_btn_desc.is_disabled .item.is_active .btn {}
 
 /* list_btn_arrow */
 .list_btn_arrow {margin-top:20px;}
