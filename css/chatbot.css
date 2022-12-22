@@ -83,6 +83,7 @@
 .list_btn_arrow .item + .item {margin-top:12px;}
 .list_btn_arrow .btn {width:100%;line-height:20px;padding:20px 50px 20px 20px;background:#FEE90F;color:#000;font-size:16px;font-weight:700;text-align:left;border-radius:20px;}
 .list_btn_arrow .btn:after {content:"";position:absolute;top:50%;right:12px;width:28px;height:28px;margin-top:-14px;background:#000 url('../img/ico_arrow.png') no-repeat 50% 50%/20px;border-radius:12px;}
+.list_btn_arrow.is_disabled .item .btn {background:repeating-linear-gradient( -60deg, #fee90f, #fee90f 6px, #ecd80d 6px, #ecd80d 11px);color:rgba(0, 0, 0, .5) !important;}
 
 /* list_btn_init */
 .list_btn_init {display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;margin-top:20px;}
