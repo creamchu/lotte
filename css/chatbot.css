@@ -162,7 +162,7 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 /* list_btn_com */
 .list_btn_com {margin-top:20px;text-align:center;}
 .list_btn_com .btn {min-width:124px;background:#FEE90F;color:#000;border-radius:16px;}
-.list_btn_com .btn.btn_add {width:100%;padding:14px 12px;font-size:16px;}
+.list_btn_com .btn.btn_add {width:100%;padding:14px 12px;background:#FEE90F;font-size:16px;}
 .list_btn_com .btn.btn_new {min-width:152px;padding:14px 12px;background:#fff;color:#000;font-size:16px;font-weight:700;}
 .list_btn_com.is_disabled .btn {background:#000;color:#fff;}
 
