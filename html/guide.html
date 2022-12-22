@@ -21,7 +21,6 @@
 		<style>
 			#guide{position:relative;max-width:1920px;height:100%;padding:20px 30px 50px;background:#522E92;color:#000;overflow-y:scroll;}
 			#guide h1{margin-top:50px;margin-bottom:100px;color:#fff;text-align:center;}
-			#guide .guide_inner {}
 			#guide .guide_tit{margin:50px 0 20px;padding-left:10px;color:#fff;border-left:5px solid #a352ff;}
 			#guide hr{margin-top:20px;margin-left:-30px;margin-right:-30px;border-top:1px solid #a352ff;}
 		</style>
@@ -133,8 +132,23 @@
 					<a href="javascript:;" class="btn">보험기간 변경</a>
 				</li>
 			</ul>
+							
+			<ul class="list_btn list_btn_arrow is_disabled"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn">보험기간 변경</a>
+				</li>
+			</ul>
 
 			<ul class="list_btn list_btn_init"><!-- 비활성화 : '.is_disabled' 추가 -->
+				<li class="item">
+					<a href="javascript:;" class="btn btn_continue">계속진행</a>
+				</li>
+				<li class="item">
+					<a href="javascript:;" class="btn btn_init" onclick="fn.init();">처음으로</a>
+				</li>
+			</ul>
+
+			<ul class="list_btn list_btn_init is_disabled"><!-- 비활성화 : '.is_disabled' 추가 -->
 				<li class="item">
 					<a href="javascript:;" class="btn btn_continue">계속진행</a>
 				</li>
@@ -276,6 +290,32 @@
 								<label>
 									<input type="radio" name="radio3">
 									<span>60세 이상</span>
+								</label>
+							</div>
+						</li>
+						<li class="form_item">
+							<span class="form_tit">의료급여 수급권자 여부</span>
+							<div class="form_unit form_rdo_btn list_btn"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+								<label>
+									<input type="radio" name="radio4"><!-- 비활성화 : disabled 속성 추가 -->
+									<span>해당없음</span>
+								</label>
+								<label>
+									<input type="radio" name="radio4">
+									<span>해당함</span>
+								</label>
+							</div>
+						</li>
+						<li class="form_item">
+							<span class="form_tit">의료급여 수급권자 여부</span>
+							<div class="form_unit form_rdo_btn list_btn is_disabled"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+								<label>
+									<input type="radio" name="radio5" checked disabled><!-- 비활성화 : disabled 속성 추가 -->
+									<span>해당없음</span>
+								</label>
+								<label>
+									<input type="radio" name="radio5" disabled>
+									<span>해당함</span>
 								</label>
 							</div>
 						</li>
