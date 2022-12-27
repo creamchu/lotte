@@ -25,6 +25,7 @@
 
 /* title */
 .h2_tit {line-height:20px;color:#fff;font-size:16px;font-weight:700;}
+.h2_tit ~ .h2_tit {margin-top:22px;}
 
 /* btn */
 .btn {display:inline-block;position:relative;min-width:50px;padding:12px 5px;background-color:rgba(125, 79, 207, .68);color:#fff;font-size:14px;font-weight:700;text-align:center;vertical-align:middle;border-radius:24px;}
@@ -33,7 +34,7 @@
 
 /* form */
 input, select, textarea {padding:0 16px;background:rgba(70, 39, 132, .5);font-size:16px;border-radius:16px;}
-textarea {width:100%;height:128px;padding:14px 16px;border:none;resize:none;overflow-y:auto;}
+textarea {width:100%;height:84px;padding:14px 16px;border:none;resize:none;overflow-y:auto;}
 textarea::placeholder {color:rgba(255, 255, 255, .4);}
 textarea:disabled {color:#888;background:#f3f3f3;}
 
@@ -62,7 +63,7 @@ input[type="radio"]:disabled + span,
 input[type="radio"]:checked:disabled + span {cursor:default;}
 
 /* tooltip */
-.tooltip {display:inline-block;width:24px;height:24px;margin-top:-1px;margin-left:5px;background:url('../img/ico_tooltip.png') no-repeat 0 0/100%;vertical-align:middle;}
+.tooltip {display:inline-block;width:24px;height:24px;margin-top:-1px;margin-left:3px;background:url('../img/ico_tooltip.png') no-repeat 0 0/100%;vertical-align:middle;}
 
 /* tab_wrap */
 .tab_wrap .tab_menu {margin-bottom:16px;}
@@ -241,6 +242,12 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 .accordion_list > li:first-child {margin-top:0;}
 .accordion_list > li:before {content:"";position:absolute;top:8px;left:0;width:4px;height:4px;background:#fff;border-radius:4px;}
 .accordion_list_child > li {line-height:20px;margin-top:4px;}
+.accordion_list_child > li:before {margin-right:4px;}
+.accordion_list_child > li:nth-of-type(1):before {content:"①";}
+.accordion_list_child > li:nth-of-type(2):before {content:"②";}
+.accordion_list_child > li:nth-of-type(3):before {content:"③";}
+.accordion_list_child > li:nth-of-type(4):before {content:"④";}
+.accordion_list_child > li:nth-of-type(5):before {content:"⑤";}
 
 .accordion_form {display:none;position:relative;padding:20px;background:#fff;}
 .accordion_form label {display:block;margin-top:20px;}
@@ -389,6 +396,12 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 /* document_wrap */
 .document_wrap {padding:20px 20px 5px;background:rgba(125, 79, 207, .68);border-radius:24px;}
 .document_list li {line-height:32px;color:#FEE90F;font-size:20px;}
+.document_list li strong:before {margin-right:4px;}
+.document_list li:nth-of-type(1) strong:before {content:"①";}
+.document_list li:nth-of-type(2) strong:before {content:"②";}
+.document_list li:nth-of-type(3) strong:before {content:"③";}
+.document_list li:nth-of-type(4) strong:before {content:"④";}
+.document_list li:nth-of-type(5) strong:before {content:"⑤";}
 .document_txt {line-height:20px;margin-top:12px;padding-bottom:16px;color:#fff;font-size:14px;border-bottom:1px solid rgba(255, 255, 255, .1);word-break:keep-all;}
 .document_btn {position:relative;width:100%;height:55px;padding:0 28px;color:#fff;font-size:14px;font-weight:700;text-align:left;}
 .document_btn:before {content:"";display:inline-block;position:absolute;top:50%;left:0;width:24px;height:24px;margin-top:-12px;background:url('../img/ico_document.png') no-repeat 50% 50%/100%;}
