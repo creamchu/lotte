@@ -439,7 +439,6 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 .loading .loading-mes-wrap {padding:32px 24px;}
 .loading .loading-mes1 {font-size:12px;text-align:center;}
 .loading .loading-mes1 strong {font-size:40px;}
-.loading .loading-mes2 {display:none;}
-.loading .loading-mes3 {padding-top:24px;font-size:14px;font-weight:300;text-align:center;border-top:1px solid #fff;}
+.loading .loading-mes3 {font-size:14px;font-weight:300;text-align:center;}
 .loading .loading-mes3 span + strong {font-weight:400;}
 .loading .loading-eff {min-height:100px;margin:24px auto 32px;}
