@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>롯데손해보험 챗봇</title>
+	<!-- source// -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/jquery_library.css">
+	<link rel="stylesheet" href="../css/chatbot.css">
+	<script src="../js/jquery_2.1.1.min.js"></script>
+	<script src="../js/jquery_library.js"></script>
+	<script src="../js/ui.chatbot.js"></script>
+	<!-- //source -->
+</head>
+
+<body>
+	<!-- 스킵네비게이션 -->
+	<div id="skip">
+		<a href="#chat_input">채팅대화창 바로가기</a>
+	</div>
+	<!-- //스킵네비게이션 -->
+
+	<!-- 미니앱 헤더 (D: 마크업 확인용으로 개발시 제외해주세요.)-->
+	<header class="header" style="display:block;height:44px;line-height:44px;background:#522e92;color:#fff;font-size:16px;font-weight:700;text-align:center;">챗봇</header>
+	<!-- //미니앱 헤더 (D: 마크업 확인용으로 개발시 제외해주세요.)-->
+
+	<!-- chat_wrap -->
+	<div id="chat_wrap">
+
+		<!-- chat_cont -->
+		<div class="chat_cont">
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin"><!-- 사고정보 내용을 불러온 경우 -->
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>사고정보</strong>를 확인해 주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>사고정보 정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">사고내용</span>
+										<div class="form_unit">
+											<textarea maxlength="200" placeholder="내용 입력(200자 이내)">사고내용 청구</textarea>
+											<span class="form_txt2">( 1 / 200자 )</span>
+										</div>
+										<p class="form_txt">서류의 진단명 또는 청구유형 정보이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+
+									<li class="form_item">
+										<span class="form_tit">사고일자</span>
+										<div class="form_unit form_date">
+											<input type="text" placeholder="일자 선택" value="2022.10.07" class="date" readonly>
+										</div>
+										<p class="form_txt">서류의 진단일 또는 청구 접수일 이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+
+									<li class="form_item">
+										<span class="form_tit">사고장소</span>
+										<div class="form_unit form_address">
+											<input type="text" placeholder="주소 입력" value="서울시 중구 소월로 3" readonly>
+											<button type="button" class="form_btn ico_search"><span class="hide">주소검색</span></button>
+										</div>
+										<div class="form_unit form_address">
+											<input type="text" value="롯데손해보험 빌딩 6층" readonly>
+											<button type="button" class="form_btn"><span class="hide">주소검색</span></button>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+
+						<ul class="list_btn list_btn_com"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+							<li class="item">
+								<a href="javascript:;" class="btn">확인</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin"><!-- 사고정보 내용을 입력해야 하는 경우 -->
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>사고정보</strong>를 입력해 주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>사고정보 정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">사고내용</span>
+										<div class="form_unit">
+											<textarea maxlength="200" placeholder="내용 입력(200자 이내)"></textarea>
+											<span class="form_txt2">( 1 / 200자 )</span>
+										</div>
+										<p class="form_txt">서류의 진단명 또는 청구유형 정보이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+
+									<li class="form_item">
+										<span class="form_tit">사고일자</span>
+										<div class="form_unit form_date">
+											<input type="text" placeholder="일자 선택" class="date" readonly>
+										</div>
+										<p class="form_txt">서류의 진단일 또는 청구 접수일 이며,
+											필요 시 수정해 주세요.</p>
+									</li>
+
+									<li class="form_item">
+										<span class="form_tit">사고장소</span>
+										<div class="form_unit form_address">
+											<input type="text" placeholder="주소 입력" readonly>
+											<button type="button" class="form_btn ico_search"><span class="hide">주소검색</span></button>
+										</div>
+										<div class="form_unit form_address">
+											<input type="text" readonly>
+											<button type="button" class="form_btn"><span class="hide">주소검색</span></button>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+
+						<ul class="list_btn list_btn_com is_default"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+							<li class="item">
+								<a href="javascript:;" class="btn">확인</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap">
+				<p class="user_txt">사고 내용 입력 확인</p>
+			</div>
+			<!-- //user_wrap -->
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>보험금을 받을 입금계좌</strong>를 선택해주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>입금계좌 선택</legend>
+								<h2 class="h2_tit">입금계좌</h2>
+								<ul>
+									<li class="form_item">
+										<div class="pay_list">
+											<!--
+												(추후 계좌케이스 더추가될 예정)
+												계좌 분기 : 클래스, 텍스트 변경
+												1. 우정사업본부 : label.post
+												2. KB국민은행 : label.kb
+												3. 하나은행 : label.hana
+											-->
+											<label class="post">
+												<input type="radio" name="radio">
+												<span><span class="hide">우정사업본부</span></span>
+												<div class="pay_cont">
+													<span class="logo"></span>
+													<dl class="info">
+														<dt>계좌번호</dt>
+														<dd class="num">
+															<span>3775</span>
+															<span class="masking">****</span>
+															<span>56789012</span>
+														</dd>
+													</dl>
+												</div>
+											</label>
+
+											<label class="kb">
+												<input type="radio" name="radio">
+												<span><span class="hide">KB국민은행</span></span>
+												<div class="pay_cont">
+													<span class="logo"></span>
+													<dl class="info">
+														<dt>계좌번호</dt>
+														<dd class="num">
+															<span>3775</span>
+															<span class="masking">****</span>
+															<span>56789012</span>
+														</dd>
+													</dl>
+												</div>
+											</label>
+
+											<label class="hana">
+												<input type="radio" name="radio">
+												<span><span class="hide">하나은행</span></span>
+												<div class="pay_cont">
+													<span class="logo"></span>
+													<dl class="info">
+														<dt>계좌번호</dt>
+														<dd class="num">
+															<span>3775</span>
+															<span class="masking">****</span>
+															<span>56789012</span>
+														</dd>
+													</dl>
+												</div>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+
+						<ul class="list_btn list_btn_com is_default"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+							<li class="item">
+								<a href="javascript:;" class="btn">확인</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap">
+				<p class="user_txt">입금 계좌 선택</p>
+			</div>
+			<!-- //user_wrap -->
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>요청자 휴대폰 번호</strong>를 확인해 주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>요청자 휴대폰 번호 정보 입력</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">요청자 휴대폰 번호</span>
+										<div class="form_unit">
+											<input type="text" maxlength="13" placeholder="'-' 없이 입력">
+											<p class="form_validate">올바르게 입력해 주세요.</p>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+
+						<ul class="list_btn list_btn_com is_default"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+							<li class="item">
+								<a href="javascript:;" class="btn">확인</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap">
+				<p class="user_txt">휴대폰 번호 입력</p>
+			</div>
+			<!-- //user_wrap -->
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>의료급여 수급권자 여부</strong>를 선택해 주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>의료급여 수급권자 여부 선택</legend>
+								<ul>
+									<li class="form_item">
+										<span class="form_tit">의료급여 수급권자 여부</span>
+										<div class="form_unit form_rdo_btn list_btn"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+											<label>
+												<input type="radio" name="radio2"><!-- 비활성화 : disabled 속성 추가 -->
+												<span>해당없음</span>
+											</label>
+											<label>
+												<input type="radio" name="radio2">
+												<span>해당함</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+			<!-- user_wrap -->
+			<div class="user_wrap">
+				<p class="user_txt">수급권자 확인</p>
+			</div>
+			<!-- //user_wrap -->
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>보험금을 받을 입금계좌</strong>를 등록해 주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>입금계좌 선택</legend>
+								<h2 class="h2_tit">입금계좌</h2>
+								<button type="button" class="pay_btn">계좌번호 등록</button>
+							</fieldset>
+						</form>
+
+						<ul class="list_btn list_btn_com is_default"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+							<li class="item">
+								<a href="javascript:;" class="btn">확인</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+			<!-- bot_wrap type_thin -->
+			<div class="bot_wrap type_thin">
+				<div class="bot_img">
+					<span class="ico ico_bot"></span>
+				</div>
+				<div class="bot_box">
+					<div class="bot_box_inner">
+						<p class="bot_txt">
+							<strong>보험금을 받을 입금계좌</strong>를 입력해 주세요.
+						</p>
+
+						<form class="form_wrap">
+							<fieldset>
+								<legend>입금계좌 선택</legend>
+								<div class="tab_wrap">
+									<ul class="tab_menu">
+										<li class="form_item">
+											<span class="form_tit">예금주</span>
+											<div class="form_unit form_rdo_btn">
+												<label>
+													<input type="radio" name="radio3" checked>
+													<span>본인</span>
+												</label>
+												<label>
+													<input type="radio" name="radio3">
+													<span>김*은</span>
+												</label>
+											</div>
+										</li>
+									</ul>
+
+									<div class="tab_cont">
+										<!-- 본인 탭내용 -->
+										<div class="tab_item is_active">
+											<h2 class="h2_tit">입금계좌</h2>
+											<button type="button" class="pay_btn">계좌번호 등록</button>
+										</div>
+										<!-- //본인 탭내용 -->
+
+										<!-- 피보험자 탭내용 -->
+										<div class="tab_item">
+											<ul>
+												<li class="form_item">
+													<span class="form_tit">은행/증권사</span>
+													<div class="form_unit form_sel">
+														<input type="text" placeholder="선택" class="sel" readonly>
+														<button type="button" class="form_btn ico_sel"><span class="hide">선택</span></button>
+													</div>
+												</li>
+
+												<li class="form_item">
+													<span class="form_tit">계좌번호</span>
+													<div class="form_unit">
+														<input type="text" placeholder="'-' 없이 입력">
+														<p class="form_validate">올바르게 입력해 주세요.</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- //피보험자 탭내용 -->
+									</div>
+								</div>
+							</fieldset>
+						</form>
+
+						<ul class="list_btn list_btn_com is_default"><!--  default : '.is_default' 추가 / 비활성화 : '.is_disabled' 추가 -->
+							<li class="item">
+								<a href="javascript:;" class="btn">확인</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //bot_wrap type_thin -->
+
+		</div>
+		<!-- //chat_cont -->
+
+		<!-- chat_foot -->
+		<div class="chat_foot">
+
+			<!-- restart_wrap -->
+			<div class="restart_wrap">
+				<button type="button" class="btn_restart" onclick="fn.restart();">다시하기</button>
+			</div>
+			<!-- //restart_wrap -->
+
+			<!-- chat_input_box -->
+			<div class="chat_input_box">
+				<input type="text" id="chat_input" placeholder="궁금한점을 입력하세요." title="문의내용"><!-- 비활성화 : disabled 속성 추가 -->
+				<button type="button" class="btn_send"><span class="hide">문의 내용 전송</span></button>
+			</div>
+			<!-- //chat_input_box -->
+			
+			<!-- keyword_box -->
+			<div class="keyword_box"><!-- 활성화 : '.is_active' 추가 -->
+				<ul>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+					<li><a href="javascript:;"><strong class="mark">청구</strong>방법에 대해 궁금해요.</a></li>
+				</ul>
+			</div>
+			<!-- //keyword_box -->
+
+		</div>
+		<!-- //chat_foot -->
+
+	</div>
+	<!-- //chat_wrap -->
+</body>
+</html>
