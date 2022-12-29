@@ -435,7 +435,8 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 */
 
 /* loading */
-.loading {top:50%;bottom:auto;left:0;right:auto;margin:-180px 24px 0;padding:32px 24px;border-radius:30px;}
+.loading {top:50%;bottom:auto;left:0;right:auto;margin:-50% 24px 0;padding:32px 24px;border-radius:30px;}
+.loading .loading-mes-wrap {padding:32px 24px;}
 .loading .loading-mes1 {font-size:12px;text-align:center;}
 .loading .loading-mes1 strong {font-size:40px;}
 .loading .loading-mes2 {display:none;}
