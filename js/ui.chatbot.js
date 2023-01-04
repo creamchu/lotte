@@ -39,12 +39,21 @@ var fn = (function() {
 		
 		//accordion
 		accordion : function(){
+			
+			//accordion 이벤트
 			$(document).on("click", ".accordion .btn_item", function(){
 				var $this = $(this);
 
 				$this.closest(".accordion_item").addClass("is_active").siblings().removeClass("is_active");
 			});
 
+			//다시선택 이벤트
+			$(document).on("click", ".accordion .btn_reset", function(){
+				$(".accordion_item").removeClass("is_active");
+				$(".accordion_form label input").prop('checked', false);
+			});
+
+			//설명보기 이벤트
 			$(document).on("click", ".accordion .btn_allview", function(){
 				var $this = $(this).closest(".accordion");
 

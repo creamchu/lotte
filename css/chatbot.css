@@ -228,9 +228,11 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 
 /* accordion */
 .accordion {margin-top:-12px;}
-.accordion .allview {margin-bottom:16px;text-align:right;}
-.accordion .allview .btn_allview {display:inline-block;padding:6px 12px 4px 8px;background:#000;color:#fff;font-size:12px;border-radius:16px;}
-.accordion .allview .btn_allview:before {content:"";display:inline-block;width:20px;height:20px;margin-top:-2px;margin-right:4px;background:url('../img/ico_allview.png') no-repeat 0 0/100%;vertical-align:middle;}
+.accordion .accordion_btns {margin-bottom:16px;text-align:right;}
+.accordion .accordion_btns .btn_reset {display:inline-block;padding:6px 12px 4px 8px;background:#fff;color:#000;font-size:12px;font-weight:700;border-radius:16px;}
+.accordion .accordion_btns .btn_reset:before {content:"";display:inline-block;width:20px;height:20px;margin-top:-2px;margin-right:4px;background:url('../img/ico_reset.png') no-repeat 0 0/100%;vertical-align:middle;}
+.accordion .accordion_btns .btn_allview {display:inline-block;padding:6px 12px 4px 8px;background:#000;color:#fff;font-size:12px;border-radius:16px;}
+.accordion .accordion_btns .btn_allview:before {content:"";display:inline-block;width:20px;height:20px;margin-top:-2px;margin-right:4px;background:url('../img/ico_allview.png') no-repeat 0 0/100%;vertical-align:middle;}
 
 .accordion .accordion_item {border-radius:24px;overflow:hidden;}
 .accordion .accordion_item + .accordion_item {margin-top:12px;}
@@ -250,8 +252,8 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 .accordion_list_child > li:nth-of-type(5):before {content:"⑤";}
 
 .accordion_form {display:none;position:relative;padding:20px;background:#fff;}
+.accordion_form .accordion_form_tit {display:inline-block;padding:4px 8px;color:#522E92;font-size:12px;border:1px solid #522E92;border-radius:16px;}
 .accordion_form label {display:block;margin-top:20px;}
-.accordion_form label:first-child {margin-top:0;}
 .accordion_form .head {color:#000;font-size:14px;font-weight:400;}
 .accordion_form .data {display:none;margin-top:8px;line-height:20px;color:rgba(0, 0, 0, .5);font-size:14px;}
 .accordion_form input:checked + span .head,
@@ -415,15 +417,16 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 .file_list .file_item em {display:none;}
 .file_list .file_item .txt {padding:10px 2px;}
 .file_list .file_item .desc {display:block;line-height:16px;margin-top:4px;color:#fff;font-size:12px;word-break:break-all;opacity:.5;}
-.file_list .file_add {position:absolute;top:0;left:0;width:100%;height:100%;}
+.file_list .file_add {position:absolute;bottom:0;right:0;width:100%;height:100%;}
 .file_list .file_add:after {content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:36px;background:rgba(0, 0, 0, .2) url('../img/ico_file_add.png') no-repeat 50% 50%/20px;border-bottom-left-radius:16px;border-bottom-right-radius:16px;}
-.file_list .file_del {display:none;position:absolute;bottom:8px;right:9px;width:24px;height:24px;background:#000 url('../img/ico_file_del.png') no-repeat 50% 50%/20px;border-radius:8px;}
+.file_list .file_del {display:none;position:absolute;top:-4px;right:-4px;width:20px;height:20px;background:#000 url('../img/ico_file_del.png') no-repeat 50% 50%/100%;border-radius:100%;}
 .file_list .file_item.is_active {align-items:baseline;justify-content:left;padding-top:22px;background:url('../img/bg_file.png') no-repeat 0 0/100% 100%;border:none;color:#000;text-align:left;}
 .file_list .file_item.is_active strong {font-weight:700;}
-.file_list .file_item.is_active em {display:block;position:absolute;bottom:12px;left:8px;}
+.file_list .file_item.is_active em {display:block;position:absolute;bottom:12px;left:8px;line-height:16px;}
 .file_list .file_item.is_active .desc {color:#000;}
 .file_list .file_item.is_active .txt {width:100%;padding:0 8px;}
-.file_list .file_item.is_active .file_add {display:none;}
+.file_list .file_item.is_active .file_add {bottom:8px;right:9px;width:24px;height:24px;}
+.file_list .file_item.is_active .file_add:after {height:100%;background:#000 url('../img/ico_file_add_active.png') no-repeat 0 0/100% 100%;border-radius:8px;}
 .file_list .file_item.is_active .file_del {display:block;}
 .file_list .file_item.is_many {background:url('../img/bg_file_many.png') no-repeat 0 0/100% 100%;}
 
