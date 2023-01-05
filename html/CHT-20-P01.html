@@ -9,6 +9,20 @@
 	<!-- source// -->
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/jquery_library.css">
+	<style>
+		.loading {display:none;position:fixed;z-index:9000;background:rgba(0,0,0,.9);top:0;left:0;right:0;bottom:0;}
+		.loading .loading-mes-wrap {display:flex;flex-direction:column;height:100%;padding:100px 24px 80px;color:#fff;}
+		.loading .loading-mes-wrap > span {display:block;}
+		.loading .loading-eff {width:132px;height:132px;margin:auto auto;}
+		.loading .loading-mes1 {font-size:12px;font-weight:700;line-height:16px;text-transform:uppercase;}
+		.loading .loading-mes1 strong {display:block;font-size:48px;line-height:60px;}
+		.loading .loading-mes2 {display:block;padding-bottom:20px;margin-bottom:20px;font-size:32px;font-weight:700;line-height:40px;text-transform:uppercase;border-bottom:1px solid #fff;}
+		.loading .loading-mes3 {font-size:14px;font-weight:300;line-height:16px;}
+		.loading .loading-mes3 strong {display:block;font-weight:400;color:#7d4fcf;}
+		.brand-fam .loading .loading-mes3 strong {color:#394def;}
+		.loading .loading-mes3 span + strong {margin-top:4px;}
+		.loading .loading-mes3 span {display:block;}
+	</style>
 	<link rel="stylesheet" href="../css/chatbot.css">
 	<script src="../js/jquery_2.1.1.min.js"></script>
 	<script src="../js/jquery_library.js"></script>
@@ -33,64 +47,7 @@
 		<!-- chat_cont -->
 		<div class="chat_cont">
 			
-			<!-- bot_wrap -->
-			<div class="bot_wrap">
-				<div class="bot_img">
-					<span class="ico ico_bot"></span>
-				</div>
-				<div class="bot_box">
-					<div class="bot_box_inner">
-						<p class="bot_txt">
-							<strong>필요서류</strong>를 첨부해 주세요.
-							<span class="block">보험금 심사 과정에서 원본서류 및 
-							추가서류 제출을 요청 드릴 수 
-							있습니다.</span>
-						</p>
-
-						<div class="file_wrap">
-							<h2 class="h2_tit">필요서류 <button type="button" class="tooltip"><span class="hide">도움말</span></button></h2>
-
-							<ul class="file_list">
-								<li class="file_item"><!-- 파일첨부한 경우 : '.is_active' 추가 / 첨부된 파일이 2개이상 경우 : '.is_active.is_many' 추가 -->
-									<p class="txt">
-										<strong>영수증 등</strong>
-										<em></em><!-- default: 빈값, 파일첨부시 텍스트 삽입 -->
-									</p>
-									<button type="button" class="file_add"><span class="hide">파일 추가</span>
-									</button>
-									<button type="button" class="file_del"><span class="hide">파일 삭제</span></button>
-								</li>
-
-								<li class="file_item is_active">
-									<p class="txt">
-										<strong>영수증 등</strong>
-										<em>1장</em>
-									</p>
-									<button type="button" class="file_add"><span class="hide">파일 추가</span>
-									</button>
-									<button type="button" class="file_del"><span class="hide">파일 삭제</span></button>
-								</li>
-							</ul>
-						</div>
-
-						<ul class="list_btn list_btn_com is_default">
-							<!--  1. default : '.is_default' 추가
-										2. 활성화 : 'is_default' 제거
-										3. 비활성화 : '.is_disabled' 추가 -->
-							<li class="item">
-								<a href="javascript:;" class="btn">완료</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- //bot_wrap -->
-
-			<!-- user_wrap -->
-			<div class="user_wrap">
-				<p class="user_txt">첨부 완료</p>
-			</div>
-			<!-- //user_wrap -->
+			<button type="button" class="btn" onclick='_loading = $plugin.loading({"title": "SCANNING", "name": "", "msg": {"time": "최대 1분 소요", "work": "서류 정보 읽어오는 중"}}).show();setTimeout(_loading.hide.bind(_loading),2000);'>스캐닝 팝업 버튼</button>
 
 		</div>
 		<!-- //chat_cont -->
@@ -127,5 +84,20 @@
 
 	</div>
 	<!-- //chat_wrap -->
+
+	<div class="loading" id="loading_***" style="display:block;">
+		<div class="loading-mes-wrap">
+			<span class="loading-mes1">
+				<strong>SCANNING</strong>
+				please wait..
+			</span>
+			<span class="loading-eff" data-lottie="{'src':''../../resource/img/com/loading.json', 'loop':true}"></span>
+			<span class="loading-mes2"></span>
+			<span class="loading-mes3">
+				<span>최대 1분 소요</span>
+				<strong>보험료 계산 중</strong>
+			</span>
+		</div>
+	</div>
 </body>
 </html>
