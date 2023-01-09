@@ -39,7 +39,7 @@ var fn = (function() {
 		
 		//accordion
 		accordion : function(){
-			
+
 			//accordion 이벤트
 			$(document).on("click", ".accordion .btn_item", function(){
 				var $this = $(this);
@@ -131,6 +131,10 @@ var fn = (function() {
 
 		//init
 		init : function(){
+			var html = "<div class='bot_new'>";
+				html += "<p>새로운 대화가 시작됐어요.</p>";
+				html += "</div>";
+			$(".chat_cont").append(html); // 태그 추가
 			$("#bot_init").clone().appendTo(".chat_cont");
 			$('.chat_cont').animate({
 				scrollTop: $('.chat_cont')[0].scrollHeight
@@ -148,12 +152,12 @@ $(document).on('ready', function(){
 	//cardswiper
 	var $cardswiperObj = $(".cardswiper");
 	if ( $cardswiperObj.find(".swiper-slide").length > 1 ){
-			var cardswiper = new Swiper(".cardswiper", {
-					slidesPerView: 1,
-					spaceBetween: 12,
-					observer: true,
-					observeParents: true,
-			});
+		var cardswiper = new Swiper(".cardswiper", {
+			slidesPerView: 1,
+			spaceBetween: 12,
+			observer: true,
+			observeParents: true,
+		});
 	}
 
 });
