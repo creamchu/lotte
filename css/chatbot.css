@@ -129,12 +129,42 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 .bot_wrap .bot_txt .block {display:block;margin-top:25px;}
 
 /* bot_wrap.type_loading */
+/*
 .bot_wrap.type_loading .bot_box {min-height:auto;margin-left:60px;padding:0;background:transparent;}
 .bot_wrap.type_loading .bot_box:before,
 .bot_wrap.type_loading .bot_box:after {display:none;}
 .bot_wrap.type_loading .bot_box_inner {display:inline-block;width:80px;height:40px;background:rgba(0, 0, 0, .5) url('../img/ico_bot_loading.png') no-repeat 50% 50%/40px;border-radius:24px;}
 .bot_wrap.type_loading .bot_box_inner:before,
 .bot_wrap.type_loading .bot_box_inner:after {display:none;}
+*/
+.bot_wrap.type_loading .bot_box {min-height:auto;margin-left:60px;padding:0;background:transparent;}
+.bot_wrap.type_loading .bot_box:before,
+.bot_wrap.type_loading .bot_box:after {display:none;}
+.bot_wrap.type_loading .bot_box_inner:before,
+.bot_wrap.type_loading .bot_box_inner:after {display:none;}
+.bot_wrap.type_loading .ico_loading {display:flex;align-items:center;justify-content:space-between;width:80px;height:40px;padding:0 20px;background:rgba(0, 0, 0, .5);border-radius:24px;}
+.bot_wrap.type_loading .ico_loading > span {display:inline-block;width:8px;height:8px;background:#FEE90F;border-radius:8px;opacity:0.3;}
+
+.ico_loading span:nth-child(1) {
+  animation:loadingC 1s 0.1s ease-out infinite;
+}
+.ico_loading span:nth-child(2) {
+  animation:loadingC 1s 0.3s ease-out infinite;
+}
+.ico_loading span:nth-child(3) {
+  animation:loadingC 1s 0.5s ease-out infinite;
+}
+@keyframes loadingC {
+  0 {
+    opacity:1;
+  }
+  50% {
+    opacity:0.3;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
 /* bot_wrap.type_thin */
 .bot_wrap.type_thin {margin-right:36px;}
@@ -145,7 +175,7 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 
 /* bot_new */
 .bot_new {margin:0 -24px;padding-top:16px;text-align:center;border-top:1px solid rgba(255, 255, 255, .08);}
-.bot_new p {display:inline-block;height:28px;line-height:17px;padding:6px 12px;background:#462784 url('../img/ico_bot_new.png') no-repeat 12px 50%/16px;color:#FEE90F;font-size:12px;border-radius:16px;}
+.bot_new p {display:inline-block;height:28px;line-height:16px;padding:6px 12px;background:#462784 url('../img/ico_bot_new.png') no-repeat 12px 50%/16px;color:#FEE90F;font-size:12px;border-radius:16px;}
 .bot_new p:before {content:"";display:inline-block;width:16px;height:16px;margin-right:8px;vertical-align:middle;}
 
 /* user_wrap */
