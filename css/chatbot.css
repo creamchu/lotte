@@ -146,13 +146,13 @@ input[type="radio"]:checked:disabled + span {cursor:default;}
 .bot_wrap.type_loading .ico_loading > span {display:inline-block;width:8px;height:8px;background:#FEE90F;border-radius:8px;}
 
 .ico_loading span:nth-child(1) {
-  animation:loadingC 1s 0.1s ease-in-out infinite;
+  animation:loadingC 1.2s 0.2s ease-in-out infinite;
 }
 .ico_loading span:nth-child(2) {
-  animation:loadingC 1s 0.3s ease-in-out infinite;
+  animation:loadingC 1.2s 0.4s ease-in-out infinite;
 }
 .ico_loading span:nth-child(3) {
-  animation:loadingC 1s 0.5s ease-in-out infinite;
+  animation:loadingC 1.2s 0.6s ease-in-out infinite;
 }
 @keyframes loadingC {
   0 {
